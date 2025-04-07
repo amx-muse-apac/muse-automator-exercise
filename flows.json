@@ -66,7 +66,15 @@
     {
         "id": "fdd846aaf88111f3",
         "type": "tab",
-        "label": "IR",
+        "label": "IR - Single Pulse",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7f862f0d0e4b3589",
+        "type": "tab",
+        "label": "IR - Press & Hold",
         "disabled": false,
         "info": "",
         "env": []
@@ -1595,7 +1603,7 @@
     {
         "id": "8f984c29992d0e7e",
         "type": "UI Control",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "IR - Vol+ Press",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -1606,8 +1614,8 @@
             "trigger": "PUSH",
             "state": "NONE"
         },
-        "x": 220,
-        "y": 440,
+        "x": 240,
+        "y": 100,
         "wires": [
             [
                 "fef2202427f97dbb"
@@ -1617,7 +1625,7 @@
     {
         "id": "fef2202427f97dbb",
         "type": "trigger",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "",
         "op1": "1",
         "op2": "",
@@ -1631,8 +1639,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 480,
-        "y": 440,
+        "x": 500,
+        "y": 100,
         "wires": [
             [
                 "c51b05e5470b866e"
@@ -1642,7 +1650,7 @@
     {
         "id": "c51b05e5470b866e",
         "type": "Command",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "IR - Vol+",
         "mojo": {
             "device": "idevice",
@@ -1653,8 +1661,8 @@
             },
             "cmdvalue": "Manual configuration"
         },
-        "x": 700,
-        "y": 440,
+        "x": 720,
+        "y": 100,
         "wires": [
             [
                 "fef2202427f97dbb"
@@ -1664,7 +1672,7 @@
     {
         "id": "7922fc69336f6193",
         "type": "UI Control",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "IR - Vol+ Release",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -1675,8 +1683,8 @@
             "trigger": "RELEASE",
             "state": "NONE"
         },
-        "x": 220,
-        "y": 520,
+        "x": 240,
+        "y": 180,
         "wires": [
             [
                 "903286ad8b4d4686"
@@ -1686,7 +1694,7 @@
     {
         "id": "903286ad8b4d4686",
         "type": "change",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "set msg.reset",
         "rules": [
             {
@@ -1702,8 +1710,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 520,
+        "x": 500,
+        "y": 180,
         "wires": [
             [
                 "fef2202427f97dbb"
@@ -1713,7 +1721,7 @@
     {
         "id": "6ecd219e88b20d50",
         "type": "UI Control",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "IR - Vol- Press",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -1724,8 +1732,8 @@
             "trigger": "PUSH",
             "state": "NONE"
         },
-        "x": 210,
-        "y": 620,
+        "x": 230,
+        "y": 280,
         "wires": [
             [
                 "9b22bb9cfadd19b9"
@@ -1735,7 +1743,7 @@
     {
         "id": "9b22bb9cfadd19b9",
         "type": "trigger",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "",
         "op1": "1",
         "op2": "",
@@ -1749,8 +1757,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 480,
-        "y": 620,
+        "x": 500,
+        "y": 280,
         "wires": [
             [
                 "66c98a79c2b8dd76"
@@ -1760,7 +1768,7 @@
     {
         "id": "66c98a79c2b8dd76",
         "type": "Command",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "IR - Vol+",
         "mojo": {
             "device": "idevice",
@@ -1771,8 +1779,8 @@
             },
             "cmdvalue": "Manual configuration"
         },
-        "x": 700,
-        "y": 620,
+        "x": 720,
+        "y": 280,
         "wires": [
             [
                 "9b22bb9cfadd19b9"
@@ -1782,7 +1790,7 @@
     {
         "id": "9e438f68c7faa498",
         "type": "UI Control",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "IR - Vol- Release",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -1793,8 +1801,8 @@
             "trigger": "RELEASE",
             "state": "NONE"
         },
-        "x": 220,
-        "y": 700,
+        "x": 240,
+        "y": 360,
         "wires": [
             [
                 "7fd488802dc78718"
@@ -1804,7 +1812,7 @@
     {
         "id": "7fd488802dc78718",
         "type": "change",
-        "z": "fdd846aaf88111f3",
+        "z": "7f862f0d0e4b3589",
         "name": "set msg.reset",
         "rules": [
             {
@@ -1820,8 +1828,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 700,
+        "x": 500,
+        "y": 360,
         "wires": [
             [
                 "9b22bb9cfadd19b9"
