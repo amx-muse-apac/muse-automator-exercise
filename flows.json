@@ -82,7 +82,7 @@
     {
         "id": "c72db176c6d2f7f3",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "Serial",
         "disabled": false,
         "info": "",
         "env": []
@@ -1862,6 +1862,18 @@
             [
                 "9b22bb9cfadd19b9"
             ]
+        ]
+    },
+    {
+        "id": "d87aa9555b2d94bb",
+        "type": "Status",
+        "z": "c72db176c6d2f7f3",
+        "name": "Status",
+        "mojo": {},
+        "x": 190,
+        "y": 160,
+        "wires": [
+            []
         ]
     }
 ]
