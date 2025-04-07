@@ -165,7 +165,7 @@
         "z": "5c28bdec2bd806f2",
         "name": "Controller",
         "mojo": {
-            "controller": "simulator",
+            "controller": "192.168.0.51:80",
             "protocol": "http",
             "host": "192.168.0.51",
             "port": 80,
@@ -1093,7 +1093,9 @@
         "x": 840,
         "y": 120,
         "wires": [
-            []
+            [
+                "7fe708851a589d58"
+            ]
         ]
     },
     {
@@ -1141,6 +1143,24 @@
         },
         "x": 830,
         "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fe708851a589d58",
+        "type": "Command",
+        "z": "e319b75908f448e8",
+        "name": "Set IO 2 Pull-up - True",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/2/digitalInput2KPullup",
+            "onebased": false,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 820,
+        "y": 180,
         "wires": [
             []
         ]
