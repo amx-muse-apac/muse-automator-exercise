@@ -80,6 +80,14 @@
         "env": []
     },
     {
+        "id": "c72db176c6d2f7f3",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "a49905ee68322159",
         "type": "junction",
         "z": "5bcdfee4c53f83ea",
