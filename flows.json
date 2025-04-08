@@ -160,6 +160,18 @@
         ]
     },
     {
+        "id": "c1c299cf58160ab4",
+        "type": "junction",
+        "z": "c72db176c6d2f7f3",
+        "x": 780,
+        "y": 240,
+        "wires": [
+            [
+                "ea74f137888e0f81"
+            ]
+        ]
+    },
+    {
         "id": "3f0a0d3c06ea2cad",
         "type": "Controller",
         "z": "5c28bdec2bd806f2",
@@ -182,9 +194,9 @@
         "z": "5c28bdec2bd806f2",
         "name": "Varia-80",
         "mojo": {
-            "md5": "cf46986336ea6bf67b49a9f101c0f180",
-            "tp5": "Muse Exercises UI (VARIA-80).TP5",
-            "device": "dvTP"
+            "md5": "40396cdf2f389293c92aa1516a81b26a",
+            "tp5": "Muse Exercises UI-yb-(VARIA-80).TP5",
+            "device": "dvVaria"
         },
         "x": 120,
         "y": 180,
@@ -1021,7 +1033,8 @@
         "y": 300,
         "wires": [
             [
-                "103c1866cbb4fb8a"
+                "103c1866cbb4fb8a",
+                "bc994cefc90da61e"
             ]
         ]
     },
@@ -1030,12 +1043,34 @@
         "type": "Command",
         "z": "cbf21f4371a67b3c",
         "name": "TODO: do something",
-        "mojo": {},
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/level/81",
+            "onebased": true,
+            "args": "",
+            "cmdvalue": "Message payload"
+        },
         "x": 820,
         "y": 300,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "bc994cefc90da61e",
+        "type": "debug",
+        "z": "cbf21f4371a67b3c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 340,
+        "wires": []
     },
     {
         "id": "a0ac02fafc1e8e04",
@@ -1135,7 +1170,7 @@
         "z": "e319b75908f448e8",
         "name": "IO State Button Feedback",
         "mojo": {
-            "device": "dvTP",
+            "device": "dvVaria",
             "command": "//port/1/channel/112",
             "onebased": true,
             "args": "",
@@ -1865,15 +1900,407 @@
         ]
     },
     {
-        "id": "d87aa9555b2d94bb",
-        "type": "Status",
+        "id": "c7a27d15e1abdf77",
+        "type": "Command",
         "z": "c72db176c6d2f7f3",
-        "name": "Status",
-        "mojo": {},
-        "x": 190,
-        "y": 160,
+        "name": "Set Serial Port 1 Parameters",
+        "mojo": {
+            "device": "idevice",
+            "command": "//serial/1/setCommParams",
+            "onebased": false,
+            "args": {
+                "baudRate": "9600",
+                "mode": "232",
+                "stopBits": 1,
+                "parity": "NONE",
+                "dataBits": 8
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 520,
+        "y": 80,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "9de7612c69fcc030",
+        "type": "Event",
+        "z": "c72db176c6d2f7f3",
+        "name": "idevice - Online event",
+        "mojo": {
+            "device": "idevice",
+            "event": "//Online",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "true"
+        },
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "c7a27d15e1abdf77"
+            ]
+        ]
+    },
+    {
+        "id": "be2667eab9682c79",
+        "type": "UI Control",
+        "z": "c72db176c6d2f7f3",
+        "name": "Send \"AMX\" button press",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//507/28",
+            "locator": {
+                "ccode": 151,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "3942c04836019934"
+            ]
+        ]
+    },
+    {
+        "id": "d0177f0af89e08c6",
+        "type": "UI Control",
+        "z": "c72db176c6d2f7f3",
+        "name": "Send \"MUSE\" button press",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//507/29",
+            "locator": {
+                "ccode": 152,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "85af4a7a875b0aab"
+            ]
+        ]
+    },
+    {
+        "id": "8bac3ca1302e3f9c",
+        "type": "UI Control",
+        "z": "c72db176c6d2f7f3",
+        "name": "Press for Keyboard",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//507/6",
+            "locator": {
+                "acode": 153,
+                "aport": 1,
+                "ccode": 153,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "2c70ff36c4f257b7"
+            ]
+        ]
+    },
+    {
+        "id": "3942c04836019934",
+        "type": "change",
+        "z": "c72db176c6d2f7f3",
+        "name": "set msg.payload to AMX",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "AMX",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "c1c299cf58160ab4"
+            ]
+        ]
+    },
+    {
+        "id": "85af4a7a875b0aab",
+        "type": "change",
+        "z": "c72db176c6d2f7f3",
+        "name": "set msg.payload to MUSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "MUSE",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "c1c299cf58160ab4"
+            ]
+        ]
+    },
+    {
+        "id": "ea74f137888e0f81",
+        "type": "Command",
+        "z": "c72db176c6d2f7f3",
+        "name": "Command",
+        "mojo": {
+            "device": "idevice",
+            "command": "//serial/1/send",
+            "onebased": false,
+            "args": "",
+            "cmdvalue": "Message payload"
+        },
+        "x": 1090,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83560443442b019d",
+        "type": "Event",
+        "z": "c72db176c6d2f7f3",
+        "name": "Keyboard event",
+        "mojo": {
+            "device": "dvVaria",
+            "event": "//port/1/string",
+            "onebased": true,
+            "eventKind": "Event"
+        },
+        "x": 180,
+        "y": 580,
+        "wires": [
+            [
+                "8ee465972f84a996"
+            ]
+        ]
+    },
+    {
+        "id": "014950634b7d52f6",
+        "type": "debug",
+        "z": "c72db176c6d2f7f3",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2c70ff36c4f257b7",
+        "type": "Command",
+        "z": "c72db176c6d2f7f3",
+        "name": "Command",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/send_command",
+            "onebased": true,
+            "args": {
+                "data": "^AKB-text to send;enter the text to send;;"
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 510,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ee465972f84a996",
+        "type": "change",
+        "z": "c72db176c6d2f7f3",
+        "name": "convert buffer to string",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.toString()",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 580,
+        "wires": [
+            [
+                "471daf311c0bd4ee"
+            ]
+        ]
+    },
+    {
+        "id": "ce53d3f7079d4375",
+        "type": "function",
+        "z": "c72db176c6d2f7f3",
+        "name": "remove AKB part of the string",
+        "func": "msg.payload = msg.payload.replace(/AKB-/g,'');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 580,
+        "wires": [
+            [
+                "014950634b7d52f6",
+                "058bb4449e18490b"
+            ]
+        ]
+    },
+    {
+        "id": "471daf311c0bd4ee",
+        "type": "switch",
+        "z": "c72db176c6d2f7f3",
+        "name": "If it's a keyboard event",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "AKB-",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 580,
+        "wires": [
+            [
+                "ce53d3f7079d4375"
+            ]
+        ]
+    },
+    {
+        "id": "058bb4449e18490b",
+        "type": "change",
+        "z": "c72db176c6d2f7f3",
+        "name": "save the string in flow.texttosend",
+        "rules": [
+            {
+                "t": "set",
+                "p": "texttosend",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47881b6c3de1b5ed",
+        "type": "UI Control",
+        "z": "c72db176c6d2f7f3",
+        "name": "Send message",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//507/1",
+            "locator": {
+                "ccode": 154,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "c0ca03cd85d1cdcf"
+            ]
+        ]
+    },
+    {
+        "id": "c0ca03cd85d1cdcf",
+        "type": "change",
+        "z": "c72db176c6d2f7f3",
+        "name": "get the string from flow.texttosend",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "texttosend",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "c1c299cf58160ab4"
+            ]
         ]
     }
 ]
