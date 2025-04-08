@@ -80,9 +80,33 @@
         "env": []
     },
     {
+        "id": "a8cc8acddc0312a8",
+        "type": "tab",
+        "label": "Serial - Config",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c72db176c6d2f7f3",
         "type": "tab",
-        "label": "Serial",
+        "label": "Serial - Send",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7ddfcbf0a3d81f7f",
+        "type": "tab",
+        "label": "Serial - Keyboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2fb7de998b7135bd",
+        "type": "tab",
+        "label": "Serial - Receive",
         "disabled": false,
         "info": "",
         "env": []
@@ -1902,7 +1926,7 @@
     {
         "id": "c7a27d15e1abdf77",
         "type": "Command",
-        "z": "c72db176c6d2f7f3",
+        "z": "a8cc8acddc0312a8",
         "name": "Set Serial Port 1 Parameters",
         "mojo": {
             "device": "idevice",
@@ -1926,7 +1950,7 @@
     {
         "id": "9de7612c69fcc030",
         "type": "Event",
-        "z": "c72db176c6d2f7f3",
+        "z": "a8cc8acddc0312a8",
         "name": "idevice - Online event",
         "mojo": {
             "device": "idevice",
@@ -2082,7 +2106,7 @@
         "id": "ea74f137888e0f81",
         "type": "Command",
         "z": "c72db176c6d2f7f3",
-        "name": "Command",
+        "name": "Send to serial port 1",
         "mojo": {
             "device": "idevice",
             "command": "//serial/1/send",
@@ -2090,53 +2114,17 @@
             "args": "",
             "cmdvalue": "Message payload"
         },
-        "x": 1090,
+        "x": 1120,
         "y": 240,
         "wires": [
             []
         ]
     },
     {
-        "id": "83560443442b019d",
-        "type": "Event",
-        "z": "c72db176c6d2f7f3",
-        "name": "Keyboard event",
-        "mojo": {
-            "device": "dvVaria",
-            "event": "//port/1/string",
-            "onebased": true,
-            "eventKind": "Event"
-        },
-        "x": 180,
-        "y": 580,
-        "wires": [
-            [
-                "8ee465972f84a996"
-            ]
-        ]
-    },
-    {
-        "id": "014950634b7d52f6",
-        "type": "debug",
-        "z": "c72db176c6d2f7f3",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 520,
-        "wires": []
-    },
-    {
         "id": "2c70ff36c4f257b7",
         "type": "Command",
         "z": "c72db176c6d2f7f3",
-        "name": "Command",
+        "name": "Send command to activate keyboard on Varia",
         "mojo": {
             "device": "dvVaria",
             "command": "//port/1/send_command",
@@ -2146,16 +2134,35 @@
             },
             "cmdvalue": "Manual configuration"
         },
-        "x": 510,
+        "x": 610,
         "y": 320,
         "wires": [
             []
         ]
     },
     {
+        "id": "83560443442b019d",
+        "type": "Event",
+        "z": "7ddfcbf0a3d81f7f",
+        "name": "Keyboard event",
+        "mojo": {
+            "device": "dvVaria",
+            "event": "//port/1/string",
+            "onebased": true,
+            "eventKind": "Event"
+        },
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "8ee465972f84a996"
+            ]
+        ]
+    },
+    {
         "id": "8ee465972f84a996",
         "type": "change",
-        "z": "c72db176c6d2f7f3",
+        "z": "7ddfcbf0a3d81f7f",
         "name": "convert buffer to string",
         "rules": [
             {
@@ -2171,8 +2178,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 580,
+        "x": 400,
+        "y": 180,
         "wires": [
             [
                 "471daf311c0bd4ee"
@@ -2182,7 +2189,7 @@
     {
         "id": "ce53d3f7079d4375",
         "type": "function",
-        "z": "c72db176c6d2f7f3",
+        "z": "7ddfcbf0a3d81f7f",
         "name": "remove AKB part of the string",
         "func": "msg.payload = msg.payload.replace(/AKB-/g,'');\nreturn msg;",
         "outputs": 1,
@@ -2191,11 +2198,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 580,
+        "x": 420,
+        "y": 240,
         "wires": [
             [
-                "014950634b7d52f6",
                 "058bb4449e18490b"
             ]
         ]
@@ -2203,7 +2209,7 @@
     {
         "id": "471daf311c0bd4ee",
         "type": "switch",
-        "z": "c72db176c6d2f7f3",
+        "z": "7ddfcbf0a3d81f7f",
         "name": "If it's a keyboard event",
         "property": "payload",
         "propertyType": "msg",
@@ -2217,8 +2223,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 680,
-        "y": 580,
+        "x": 640,
+        "y": 180,
         "wires": [
             [
                 "ce53d3f7079d4375"
@@ -2228,7 +2234,7 @@
     {
         "id": "058bb4449e18490b",
         "type": "change",
-        "z": "c72db176c6d2f7f3",
+        "z": "7ddfcbf0a3d81f7f",
         "name": "save the string in flow.texttosend",
         "rules": [
             {
@@ -2244,16 +2250,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1270,
-        "y": 580,
+        "x": 750,
+        "y": 240,
         "wires": [
-            []
+            [
+                "09a9fa60653ed205"
+            ]
         ]
     },
     {
         "id": "47881b6c3de1b5ed",
         "type": "UI Control",
-        "z": "c72db176c6d2f7f3",
+        "z": "7ddfcbf0a3d81f7f",
         "name": "Send message",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -2268,8 +2276,8 @@
             "trigger": "PUSH",
             "state": "NONE"
         },
-        "x": 180,
-        "y": 400,
+        "x": 140,
+        "y": 360,
         "wires": [
             [
                 "c0ca03cd85d1cdcf"
@@ -2279,7 +2287,7 @@
     {
         "id": "c0ca03cd85d1cdcf",
         "type": "change",
-        "z": "c72db176c6d2f7f3",
+        "z": "7ddfcbf0a3d81f7f",
         "name": "get the string from flow.texttosend",
         "rules": [
             {
@@ -2295,11 +2303,147 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
-        "y": 400,
+        "x": 540,
+        "y": 360,
         "wires": [
             [
-                "c1c299cf58160ab4"
+                "f525884c762b42e1"
+            ]
+        ]
+    },
+    {
+        "id": "09a9fa60653ed205",
+        "type": "template",
+        "z": "7ddfcbf0a3d81f7f",
+        "name": "create the string to send to touch panel",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "^TXT-153,0,{{payload}}",
+        "output": "str",
+        "x": 1090,
+        "y": 240,
+        "wires": [
+            [
+                "73ca3cbdb9ba3cfb"
+            ]
+        ]
+    },
+    {
+        "id": "73ca3cbdb9ba3cfb",
+        "type": "Command",
+        "z": "7ddfcbf0a3d81f7f",
+        "name": "Show saved text on Varia",
+        "mojo": {
+            "device": "dvVaria",
+            "cmdvalue": "Message payload",
+            "command": "//port/1/send_command",
+            "onebased": true
+        },
+        "x": 1070,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f525884c762b42e1",
+        "type": "Command",
+        "z": "7ddfcbf0a3d81f7f",
+        "name": "Send to serial port 1",
+        "mojo": {
+            "device": "idevice",
+            "command": "//serial/1/send",
+            "onebased": false,
+            "args": "",
+            "cmdvalue": "Message payload"
+        },
+        "x": 1040,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6afec30a09ab1914",
+        "type": "Event",
+        "z": "2fb7de998b7135bd",
+        "name": "Serial receive event",
+        "mojo": {
+            "device": "idevice",
+            "event": "//serial/2/receive",
+            "onebased": false,
+            "eventKind": "Event"
+        },
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "2f269c25de941a72"
+            ]
+        ]
+    },
+    {
+        "id": "2f269c25de941a72",
+        "type": "change",
+        "z": "2fb7de998b7135bd",
+        "name": "convert buffer to string",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.toString()",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 100,
+        "wires": [
+            [
+                "6877c150a10d718d"
+            ]
+        ]
+    },
+    {
+        "id": "25ee3e2eac02218f",
+        "type": "Command",
+        "z": "2fb7de998b7135bd",
+        "name": "Show received text on Varia",
+        "mojo": {
+            "device": "dvVaria",
+            "cmdvalue": "Message payload",
+            "command": "//port/1/send_command",
+            "onebased": true
+        },
+        "x": 1180,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6877c150a10d718d",
+        "type": "template",
+        "z": "2fb7de998b7135bd",
+        "name": "create the string to send to touch panel",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "^TXT-155,0,{{payload}}",
+        "output": "str",
+        "x": 830,
+        "y": 100,
+        "wires": [
+            [
+                "25ee3e2eac02218f"
             ]
         ]
     }
