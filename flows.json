@@ -1,8 +1,16 @@
 [
     {
+        "id": "2b7181e34df83aa6",
+        "type": "tab",
+        "label": "How a Button in Tp5 is linked to muse",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "5c28bdec2bd806f2",
         "type": "tab",
-        "label": "Connection",
+        "label": "Initialization",
         "disabled": false,
         "info": "",
         "env": []
@@ -35,6 +43,30 @@
         "id": "780de2f8de2c863d",
         "type": "tab",
         "label": "Relay - Pulse",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c72db176c6d2f7f3",
+        "type": "tab",
+        "label": "Serial - Send",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2fb7de998b7135bd",
+        "type": "tab",
+        "label": "Serial - Receive",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7ddfcbf0a3d81f7f",
+        "type": "tab",
+        "label": "Serial - Keyboard",
         "disabled": false,
         "info": "",
         "env": []
@@ -80,43 +112,674 @@
         "env": []
     },
     {
-        "id": "a8cc8acddc0312a8",
-        "type": "tab",
-        "label": "Serial - Config",
-        "disabled": false,
-        "info": "",
-        "env": []
+        "id": "d0f51348c6770777",
+        "type": "group",
+        "z": "5bcdfee4c53f83ea",
+        "name": "2_Turn off Relay",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2d1ad8ba3be3c123",
+            "777aca40f9d1fa3a",
+            "cf617aa2f4411bf8",
+            "a49905ee68322159"
+        ],
+        "x": 74,
+        "y": 399,
+        "w": 832,
+        "h": 142
     },
     {
-        "id": "c72db176c6d2f7f3",
-        "type": "tab",
-        "label": "Serial - Send",
-        "disabled": false,
-        "info": "",
-        "env": []
+        "id": "6b9fed470b65e3c1",
+        "type": "group",
+        "z": "5bcdfee4c53f83ea",
+        "name": "1_Turn on Relay",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9176ea61d844c2a9",
+            "5055327f5280fef4",
+            "c31e66d4cacc3c55",
+            "d620fd297b446671",
+            "c18f3f90484c1bd1",
+            "c650c7ebc80be1d3",
+            "685722b192572766"
+        ],
+        "x": 74,
+        "y": 99,
+        "w": 832,
+        "h": 242
     },
     {
-        "id": "7ddfcbf0a3d81f7f",
-        "type": "tab",
-        "label": "Serial - Keyboard",
-        "disabled": false,
-        "info": "",
-        "env": []
+        "id": "811b00538f8a2118",
+        "type": "group",
+        "z": "5bcdfee4c53f83ea",
+        "name": "3_Trigger feedback based on relay 1's state",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0e13c8d6ade31c5f",
+            "b3954386be66a04e",
+            "c2158c05a5dcc718"
+        ],
+        "x": 74,
+        "y": 599,
+        "w": 832,
+        "h": 122
     },
     {
-        "id": "2fb7de998b7135bd",
-        "type": "tab",
-        "label": "Serial - Receive",
-        "disabled": false,
-        "info": "",
-        "env": []
+        "id": "557dfff3553ac2a4",
+        "type": "group",
+        "z": "5c28bdec2bd806f2",
+        "name": "initialize controller and touchpanel",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3f0a0d3c06ea2cad",
+            "189d9a92e0c16dbf",
+            "4204bb387eae73c5",
+            "6e05e6ff7f1a538a"
+        ],
+        "x": 294,
+        "y": 179,
+        "w": 452,
+        "h": 122
+    },
+    {
+        "id": "e4dcf98c1da58bad",
+        "type": "group",
+        "z": "a3951fc9914c8a78",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "4c9f9d6afca13853",
+            "f64d0e64137bcdfc",
+            "adaaba8d2080a86a",
+            "3fae2f6811a13400"
+        ],
+        "x": 94,
+        "y": 59,
+        "w": 812,
+        "h": 162
+    },
+    {
+        "id": "2136188ac33c97c3",
+        "type": "group",
+        "z": "a3951fc9914c8a78",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "48a21701bdd5e4e5",
+            "ed8318976784db80",
+            "aded83ac6b6d3d10",
+            "8ea9b997c61c6731"
+        ],
+        "x": 94,
+        "y": 239,
+        "w": 812,
+        "h": 162
+    },
+    {
+        "id": "395ae287179f0ddb",
+        "type": "group",
+        "z": "a3951fc9914c8a78",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "d6bdeb1a9b11f86c",
+            "70148c9d6698aaf2",
+            "dafc74dd1eaf4254"
+        ],
+        "x": 94,
+        "y": 439,
+        "w": 832,
+        "h": 142
+    },
+    {
+        "id": "3b74f2675590616f",
+        "type": "group",
+        "z": "a3951fc9914c8a78",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "f4ce2cf9f64b2f5f",
+            "206ad933e6991fb9"
+        ],
+        "x": 94,
+        "y": 619,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "870175c8cf721ab3",
+        "type": "group",
+        "z": "29b32cd03c941b71",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "f6af922647b4b230",
+            "12d59d90b2a13d51"
+        ],
+        "x": 74,
+        "y": 599,
+        "w": 852,
+        "h": 82
+    },
+    {
+        "id": "55017a59b522811a",
+        "type": "group",
+        "z": "29b32cd03c941b71",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "c1409cda04e4a03f",
+            "11f484505d716203",
+            "8e5cb9d43071e764",
+            "3fdddb57aaccd5a5",
+            "69e9ae9e29c5b309",
+            "d475f33ecb85e1fb",
+            "1c97aa5cddbad060",
+            "da6e1d499fb5ea5b"
+        ],
+        "x": 54,
+        "y": 139,
+        "w": 1312,
+        "h": 342
+    },
+    {
+        "id": "81e90fd0175e6f57",
+        "type": "group",
+        "z": "780de2f8de2c863d",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "a8c474f07db33960",
+            "7895b263d3d837c0"
+        ],
+        "x": 74,
+        "y": 279,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "007694ec282ed36c",
+        "type": "group",
+        "z": "780de2f8de2c863d",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "b5230c19f9ba98e4",
+            "0d479bd5770e7332",
+            "913d80de34a14675",
+            "092483a64e3bb153",
+            "0be51ae86af4ea0f",
+            "900c9b94b24e12a7"
+        ],
+        "x": 74,
+        "y": 59,
+        "w": 972,
+        "h": 162
+    },
+    {
+        "id": "765dd2bfd54b2d98",
+        "type": "group",
+        "z": "5c28bdec2bd806f2",
+        "name": "initialize RS232 to 9600,8bit,1,none parity",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c7a27d15e1abdf77",
+            "9de7612c69fcc030"
+        ],
+        "x": 294,
+        "y": 359,
+        "w": 592,
+        "h": 82
+    },
+    {
+        "id": "0fa687060e7ea7bd",
+        "type": "group",
+        "z": "7ddfcbf0a3d81f7f",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "8bac3ca1302e3f9c",
+            "2c70ff36c4f257b7"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 1032,
+        "h": 82
+    },
+    {
+        "id": "4b23bef2ab7e2d9c",
+        "type": "group",
+        "z": "7ddfcbf0a3d81f7f",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "83560443442b019d",
+            "8ee465972f84a996",
+            "ce53d3f7079d4375",
+            "471daf311c0bd4ee",
+            "058bb4449e18490b",
+            "09a9fa60653ed205",
+            "73ca3cbdb9ba3cfb",
+            "fa3e01d55b7dd1d1",
+            "bb6bdccafd897fe3"
+        ],
+        "x": 34,
+        "y": 179,
+        "w": 1032,
+        "h": 322
+    },
+    {
+        "id": "6d7a42213527ad26",
+        "type": "group",
+        "z": "7ddfcbf0a3d81f7f",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "47881b6c3de1b5ed",
+            "c0ca03cd85d1cdcf",
+            "f525884c762b42e1"
+        ],
+        "x": 34,
+        "y": 539,
+        "w": 1032,
+        "h": 82
+    },
+    {
+        "id": "b39f0d1d4a9d8129",
+        "type": "group",
+        "z": "c72db176c6d2f7f3",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "be2667eab9682c79",
+            "d0177f0af89e08c6",
+            "3942c04836019934",
+            "85af4a7a875b0aab",
+            "ea74f137888e0f81",
+            "81274d8877dc4f70",
+            "c1c299cf58160ab4",
+            "4b44b8288496c1a7"
+        ],
+        "x": 74,
+        "y": 99,
+        "w": 1072,
+        "h": 242
+    },
+    {
+        "id": "8eca0f0d5719924c",
+        "type": "group",
+        "z": "2fb7de998b7135bd",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "6afec30a09ab1914",
+            "2f269c25de941a72",
+            "25ee3e2eac02218f",
+            "6877c150a10d718d",
+            "ef22160d180c4079"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 1072,
+        "h": 122
+    },
+    {
+        "id": "d733dd9be5b575ac",
+        "type": "group",
+        "z": "5c28bdec2bd806f2",
+        "name": "Initialize IO port 1",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cad7167184bb0d4c",
+            "e4de3c973784f04a",
+            "4acc5ba86ff91453"
+        ],
+        "x": 294,
+        "y": 499,
+        "w": 872,
+        "h": 82
+    },
+    {
+        "id": "eeaaab48583dd07e",
+        "type": "group",
+        "z": "cbf21f4371a67b3c",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "4703076232918c52",
+            "103c1866cbb4fb8a",
+            "bc994cefc90da61e"
+        ],
+        "x": 94,
+        "y": 179,
+        "w": 832,
+        "h": 142
+    },
+    {
+        "id": "27709cf5e97aef41",
+        "type": "group",
+        "z": "5c28bdec2bd806f2",
+        "name": "Initialize IO Port 2",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a0ac02fafc1e8e04",
+            "c17971b1bf39f781",
+            "f65d5439d14fcc13",
+            "7fe708851a589d58"
+        ],
+        "x": 294,
+        "y": 619,
+        "w": 1172,
+        "h": 82
+    },
+    {
+        "id": "587acc56888793d8",
+        "type": "group",
+        "z": "e319b75908f448e8",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "7972c22045041024",
+            "978fe0ba9c7ee2a6"
+        ],
+        "x": 114,
+        "y": 199,
+        "w": 852,
+        "h": 82
+    },
+    {
+        "id": "e2a6271b6f15f2cd",
+        "type": "group",
+        "z": "d487580768fd81c1",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "0b4c3cb3bdd76df2",
+            "79e2183dd9f02e74"
+        ],
+        "x": 74,
+        "y": 539,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "230c9791b1ced58d",
+        "type": "group",
+        "z": "d487580768fd81c1",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "e4707e48a0b3cf2b",
+            "179b287003bff6f9",
+            "e51e4f71288b71aa",
+            "e49a7656a528bc88"
+        ],
+        "x": 74,
+        "y": 319,
+        "w": 812,
+        "h": 142
+    },
+    {
+        "id": "4749ae9639d48c55",
+        "type": "group",
+        "z": "d487580768fd81c1",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "2d4ffb7069abe3b2",
+            "38d7331c8c7dd3ae",
+            "2527a971eeaef8b3",
+            "ecbb0a121027cba0"
+        ],
+        "x": 74,
+        "y": 139,
+        "w": 812,
+        "h": 142
+    },
+    {
+        "id": "5c9ddbc5d311fe57",
+        "type": "group",
+        "z": "5c28bdec2bd806f2",
+        "name": "Initialize IO Port 3",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d76915f0704a2ba9",
+            "48d24975b31a7070"
+        ],
+        "x": 294,
+        "y": 759,
+        "w": 552,
+        "h": 82
+    },
+    {
+        "id": "c02bfe6bacd1ccb3",
+        "type": "group",
+        "z": "fdd846aaf88111f3",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "baa4d4b2f6a575cf",
+            "b14eef82b4431236",
+            "82a361df1c57daf2",
+            "c20671d936e959df",
+            "1475d4c71ff314d9",
+            "a88526d917bd8a09",
+            "a0f5281b0ce7b173",
+            "cf936b5f7f894646",
+            "cb8666599ec206a7",
+            "fc08c2b34e211e73"
+        ],
+        "x": 114,
+        "y": 59,
+        "w": 692,
+        "h": 322
+    },
+    {
+        "id": "f5390c1c3ac4a43b",
+        "type": "group",
+        "z": "7f862f0d0e4b3589",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "8f984c29992d0e7e",
+            "fef2202427f97dbb",
+            "c51b05e5470b866e",
+            "7922fc69336f6193",
+            "903286ad8b4d4686"
+        ],
+        "x": 134,
+        "y": 59,
+        "w": 672,
+        "h": 162
+    },
+    {
+        "id": "424aed7b919ca5f1",
+        "type": "group",
+        "z": "7f862f0d0e4b3589",
+        "style": {
+            "stroke": "#3d3e46",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "6ecd219e88b20d50",
+            "9b22bb9cfadd19b9",
+            "66c98a79c2b8dd76",
+            "9e438f68c7faa498",
+            "7fd488802dc78718"
+        ],
+        "x": 134,
+        "y": 239,
+        "w": 672,
+        "h": 162
     },
     {
         "id": "a49905ee68322159",
         "type": "junction",
         "z": "5bcdfee4c53f83ea",
+        "g": "d0f51348c6770777",
         "x": 460,
-        "y": 220,
+        "y": 500,
         "wires": [
             [
                 "2d1ad8ba3be3c123"
@@ -127,8 +790,9 @@
         "id": "685722b192572766",
         "type": "junction",
         "z": "5bcdfee4c53f83ea",
+        "g": "6b9fed470b65e3c1",
         "x": 460,
-        "y": 160,
+        "y": 300,
         "wires": [
             [
                 "9176ea61d844c2a9"
@@ -139,8 +803,9 @@
         "id": "8ea9b997c61c6731",
         "type": "junction",
         "z": "a3951fc9914c8a78",
-        "x": 440,
-        "y": 240,
+        "g": "2136188ac33c97c3",
+        "x": 480,
+        "y": 360,
         "wires": [
             [
                 "aded83ac6b6d3d10"
@@ -151,7 +816,8 @@
         "id": "3fae2f6811a13400",
         "type": "junction",
         "z": "a3951fc9914c8a78",
-        "x": 440,
+        "g": "e4dcf98c1da58bad",
+        "x": 480,
         "y": 180,
         "wires": [
             [
@@ -163,8 +829,9 @@
         "id": "e49a7656a528bc88",
         "type": "junction",
         "z": "d487580768fd81c1",
+        "g": "230c9791b1ced58d",
         "x": 460,
-        "y": 300,
+        "y": 420,
         "wires": [
             [
                 "e4707e48a0b3cf2b"
@@ -175,6 +842,7 @@
         "id": "ecbb0a121027cba0",
         "type": "junction",
         "z": "d487580768fd81c1",
+        "g": "4749ae9639d48c55",
         "x": 460,
         "y": 240,
         "wires": [
@@ -187,6 +855,7 @@
         "id": "c1c299cf58160ab4",
         "type": "junction",
         "z": "c72db176c6d2f7f3",
+        "g": "b39f0d1d4a9d8129",
         "x": 780,
         "y": 240,
         "wires": [
@@ -196,50 +865,423 @@
         ]
     },
     {
-        "id": "3f0a0d3c06ea2cad",
+        "id": "24a05d166294a34c",
+        "type": "Control Panel",
+        "z": "2b7181e34df83aa6",
+        "name": "Control Panel",
+        "mojo": {
+            "device": "idevice",
+            "md5": "94cd2b77987d8cc0418229a1b5902195",
+            "tp5": "overview_button_to_muse.TP5",
+            "type": "touch_panel"
+        },
+        "x": 570,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2c310739e24e352d",
+        "type": "UI Control",
+        "z": "2b7181e34df83aa6",
+        "name": "UI Control",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//1/1",
+            "locator": {
+                "ccode": 1,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "ANY",
+            "state": "NONE"
+        },
+        "x": 320,
+        "y": 400,
+        "wires": [
+            [
+                "7a0b8ed4f4a80120",
+                "0e4511b5cebacdfe"
+            ]
+        ]
+    },
+    {
+        "id": "7a0b8ed4f4a80120",
+        "type": "Command",
+        "z": "2b7181e34df83aa6",
+        "name": "feedback",
+        "mojo": {
+            "device": "tpTest",
+            "command": "//port/1/channel/1",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 560,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4ef9f518a1103b2",
         "type": "Controller",
-        "z": "5c28bdec2bd806f2",
+        "z": "2b7181e34df83aa6",
         "name": "Controller",
         "mojo": {
-            "controller": "192.168.0.51:80",
+            "controller": "simulator",
             "protocol": "http",
             "host": "192.168.0.51",
             "port": 80,
             "username": "admin",
             "password": "password"
         },
-        "x": 120,
-        "y": 120,
+        "x": 320,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "735fbf4f76967eb6",
+        "type": "comment",
+        "z": "2b7181e34df83aa6",
+        "name": "Readme for this tab",
+        "info": "",
+        "x": 1070,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0e4511b5cebacdfe",
+        "type": "Command",
+        "z": "2b7181e34df83aa6",
+        "name": "turn on LED P1",
+        "mojo": {
+            "device": "led",
+            "command": "//P1",
+            "onebased": false,
+            "args": "OFF",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 580,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f0a0d3c06ea2cad",
+        "type": "Controller",
+        "z": "5c28bdec2bd806f2",
+        "g": "557dfff3553ac2a4",
+        "name": "Controller",
+        "mojo": {
+            "controller": "simulator",
+            "protocol": "http",
+            "host": "192.168.0.51",
+            "port": 80,
+            "username": "admin",
+            "password": "password"
+        },
+        "x": 380,
+        "y": 260,
         "wires": []
     },
     {
         "id": "189d9a92e0c16dbf",
         "type": "Control Panel",
         "z": "5c28bdec2bd806f2",
+        "g": "557dfff3553ac2a4",
         "name": "Varia-80",
         "mojo": {
             "md5": "40396cdf2f389293c92aa1516a81b26a",
             "tp5": "Muse Exercises UI-yb-(VARIA-80).TP5",
-            "device": "dvVaria"
+            "device": "dvtp"
         },
-        "x": 120,
-        "y": 180,
+        "x": 620,
+        "y": 260,
         "wires": []
+    },
+    {
+        "id": "5fec685cf1c7f48e",
+        "type": "comment",
+        "z": "5c28bdec2bd806f2",
+        "name": "Readme for this tab",
+        "info": "the **_controller_** node and **_Touchpanel_** node\nare always the first 2 nodes to be included in a project.\n\nThe function of a Controller node is\nto establish connection betwween automator\nand the physcial muse controller.\n\nThe function of the touch panel is to \nexpose the channel code, address code of the\nbuttons, and other nagviation elements used \nin AMx TP5 design.\n",
+        "x": 1010,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4204bb387eae73c5",
+        "type": "comment",
+        "z": "5c28bdec2bd806f2",
+        "g": "557dfff3553ac2a4",
+        "name": "Controller Node",
+        "info": "",
+        "x": 400,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6e05e6ff7f1a538a",
+        "type": "comment",
+        "z": "5c28bdec2bd806f2",
+        "g": "557dfff3553ac2a4",
+        "name": "Touchpanel Node",
+        "info": "",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c7a27d15e1abdf77",
+        "type": "Command",
+        "z": "5c28bdec2bd806f2",
+        "g": "765dd2bfd54b2d98",
+        "name": "Set Serial Port 1 Parameters",
+        "mojo": {
+            "device": "idevice",
+            "command": "//serial/1/setCommParams",
+            "onebased": false,
+            "args": {
+                "baudRate": "9600",
+                "mode": "232",
+                "stopBits": 1,
+                "parity": "NONE",
+                "dataBits": 8
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 740,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9de7612c69fcc030",
+        "type": "Event",
+        "z": "5c28bdec2bd806f2",
+        "g": "765dd2bfd54b2d98",
+        "name": "idevice - Online event",
+        "mojo": {
+            "device": "idevice",
+            "event": "//Online",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "true"
+        },
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "c7a27d15e1abdf77"
+            ]
+        ]
+    },
+    {
+        "id": "cad7167184bb0d4c",
+        "type": "Event",
+        "z": "5c28bdec2bd806f2",
+        "g": "d733dd9be5b575ac",
+        "name": "idevice - Online event",
+        "mojo": {
+            "device": "idevice",
+            "event": "//Online",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "true"
+        },
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [
+                "e4de3c973784f04a"
+            ]
+        ]
+    },
+    {
+        "id": "e4de3c973784f04a",
+        "type": "Command",
+        "z": "5c28bdec2bd806f2",
+        "g": "d733dd9be5b575ac",
+        "name": "Set IO 1 Mode - Input",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/1/mode",
+            "onebased": false,
+            "args": "INPUT",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 720,
+        "y": 540,
+        "wires": [
+            [
+                "4acc5ba86ff91453"
+            ]
+        ]
+    },
+    {
+        "id": "4acc5ba86ff91453",
+        "type": "Command",
+        "z": "5c28bdec2bd806f2",
+        "g": "d733dd9be5b575ac",
+        "name": "Set IO 1 Input mode - Analog",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/1/inputMode",
+            "onebased": false,
+            "args": "ANALOG",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 1020,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0ac02fafc1e8e04",
+        "type": "Event",
+        "z": "5c28bdec2bd806f2",
+        "g": "27709cf5e97aef41",
+        "name": "idevice - Online event",
+        "mojo": {
+            "device": "idevice",
+            "event": "//Online",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "true"
+        },
+        "x": 420,
+        "y": 660,
+        "wires": [
+            [
+                "c17971b1bf39f781"
+            ]
+        ]
+    },
+    {
+        "id": "c17971b1bf39f781",
+        "type": "Command",
+        "z": "5c28bdec2bd806f2",
+        "g": "27709cf5e97aef41",
+        "name": "Set IO 2 Mode - Input",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/2/mode",
+            "onebased": false,
+            "args": "INPUT",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 720,
+        "y": 660,
+        "wires": [
+            [
+                "f65d5439d14fcc13"
+            ]
+        ]
+    },
+    {
+        "id": "f65d5439d14fcc13",
+        "type": "Command",
+        "z": "5c28bdec2bd806f2",
+        "g": "27709cf5e97aef41",
+        "name": "Set IO 2 Input mode - Digital",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/2/inputMode",
+            "onebased": false,
+            "args": "DIGITAL",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 1020,
+        "y": 660,
+        "wires": [
+            [
+                "7fe708851a589d58"
+            ]
+        ]
+    },
+    {
+        "id": "7fe708851a589d58",
+        "type": "Command",
+        "z": "5c28bdec2bd806f2",
+        "g": "27709cf5e97aef41",
+        "name": "Set IO 2 Pull-up - True",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/2/digitalInput2KPullup",
+            "onebased": false,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 1340,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d76915f0704a2ba9",
+        "type": "Event",
+        "z": "5c28bdec2bd806f2",
+        "g": "5c9ddbc5d311fe57",
+        "name": "idevice - Online event",
+        "mojo": {
+            "device": "idevice",
+            "event": "//Online",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "true"
+        },
+        "x": 420,
+        "y": 800,
+        "wires": [
+            [
+                "48d24975b31a7070"
+            ]
+        ]
+    },
+    {
+        "id": "48d24975b31a7070",
+        "type": "Command",
+        "z": "5c28bdec2bd806f2",
+        "g": "5c9ddbc5d311fe57",
+        "name": "Set IO 3 Mode - Input",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/3/mode",
+            "onebased": false,
+            "args": "OUTPUT",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 720,
+        "y": 800,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "9176ea61d844c2a9",
         "type": "Command",
         "z": "5bcdfee4c53f83ea",
+        "g": "6b9fed470b65e3c1",
         "name": "Relay 1 State - True",
         "mojo": {
-            "device": "dvRelay",
+            "device": "idevice",
             "command": "//relay/1/state",
             "onebased": false,
             "args": true,
             "cmdvalue": "Manual configuration"
         },
         "x": 780,
-        "y": 160,
+        "y": 300,
         "wires": [
             []
         ]
@@ -248,6 +1290,7 @@
         "id": "5055327f5280fef4",
         "type": "UI Control",
         "z": "5bcdfee4c53f83ea",
+        "g": "6b9fed470b65e3c1",
         "name": "Relay - Latch On",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -263,7 +1306,7 @@
             "state": "NONE"
         },
         "x": 180,
-        "y": 160,
+        "y": 300,
         "wires": [
             [
                 "685722b192572766"
@@ -274,6 +1317,7 @@
         "id": "2d1ad8ba3be3c123",
         "type": "Command",
         "z": "5bcdfee4c53f83ea",
+        "g": "d0f51348c6770777",
         "name": "Relay 1 State - False",
         "mojo": {
             "device": "dvRelay",
@@ -283,7 +1327,7 @@
             "cmdvalue": "Manual configuration"
         },
         "x": 780,
-        "y": 220,
+        "y": 500,
         "wires": [
             []
         ]
@@ -292,6 +1336,7 @@
         "id": "777aca40f9d1fa3a",
         "type": "UI Control",
         "z": "5bcdfee4c53f83ea",
+        "g": "d0f51348c6770777",
         "name": "Relay - Latch Off",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -307,7 +1352,7 @@
             "state": "NONE"
         },
         "x": 180,
-        "y": 220,
+        "y": 500,
         "wires": [
             [
                 "a49905ee68322159"
@@ -318,6 +1363,7 @@
         "id": "c31e66d4cacc3c55",
         "type": "inject",
         "z": "5bcdfee4c53f83ea",
+        "g": "6b9fed470b65e3c1",
         "name": "Simulate Relay - Latch On",
         "props": [
             {
@@ -333,10 +1379,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 250,
-        "y": 120,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 180,
         "wires": [
             [
                 "685722b192572766"
@@ -347,6 +1393,7 @@
         "id": "cf617aa2f4411bf8",
         "type": "inject",
         "z": "5bcdfee4c53f83ea",
+        "g": "d0f51348c6770777",
         "name": "Simulate Relay - Latch Off",
         "props": [
             {
@@ -362,10 +1409,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 250,
-        "y": 260,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 440,
         "wires": [
             [
                 "a49905ee68322159"
@@ -376,6 +1423,7 @@
         "id": "b3954386be66a04e",
         "type": "Event",
         "z": "5bcdfee4c53f83ea",
+        "g": "811b00538f8a2118",
         "name": "Relay 1 State Change Event",
         "mojo": {
             "device": "dvRelay",
@@ -385,8 +1433,8 @@
             "paramType": "Boolean",
             "boolParamFilter": "Any"
         },
-        "x": 260,
-        "y": 440,
+        "x": 220,
+        "y": 680,
         "wires": [
             [
                 "0e13c8d6ade31c5f"
@@ -397,7 +1445,8 @@
         "id": "0e13c8d6ade31c5f",
         "type": "Command",
         "z": "5bcdfee4c53f83ea",
-        "name": "Relay 1 TP Button Feedbacl",
+        "g": "811b00538f8a2118",
+        "name": "Relay 1 TP Button Feedback",
         "mojo": {
             "device": "dvTP",
             "command": "//port/1/channel/41",
@@ -405,16 +1454,71 @@
             "args": "",
             "cmdvalue": "Message payload"
         },
-        "x": 800,
-        "y": 440,
+        "x": 760,
+        "y": 680,
         "wires": [
             []
         ]
     },
     {
+        "id": "7b8ae5c4f9f9371f",
+        "type": "comment",
+        "z": "5bcdfee4c53f83ea",
+        "name": "Readme for this tab",
+        "info": "There are 3 flows in this tabs\n\n\n---\n1_Turn on Relay\n\n**Inject node** is used to the send a Boolean:True payload \ninto the flow.\n\n**UI control** node is used to establish \nlinkage between the button that created in \nTP5 design and MUSE controller.\n\nBased on the msg.payload received, the \n**Command Node** is used to trigger event.\n\nThis flow will trigger the status of a relay\nto on.\n\n---\n2_Turn off Relay\n\nThe flow is the same as the above flow except\nthat instead of turn on the relay. This flow\nwill turn off the relay.\n\n---\n3_Trigger on/off feedback\n\n**event** node will react based on the\nevent that it is bounded to. In this flow,it\nis bound to the the relay 1's state.\nDepend on the stage, a command node is used to\nturn on/off the button's feedback in the Touchpanel.\n\n\n\n",
+        "x": 1110,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d620fd297b446671",
+        "type": "comment",
+        "z": "5bcdfee4c53f83ea",
+        "g": "6b9fed470b65e3c1",
+        "name": "Command Node",
+        "info": "",
+        "x": 760,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c18f3f90484c1bd1",
+        "type": "comment",
+        "z": "5bcdfee4c53f83ea",
+        "g": "6b9fed470b65e3c1",
+        "name": "UI Control Node",
+        "info": "",
+        "x": 180,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c650c7ebc80be1d3",
+        "type": "comment",
+        "z": "5bcdfee4c53f83ea",
+        "g": "6b9fed470b65e3c1",
+        "name": "Inject Node",
+        "info": "",
+        "x": 170,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c2158c05a5dcc718",
+        "type": "comment",
+        "z": "5bcdfee4c53f83ea",
+        "g": "811b00538f8a2118",
+        "name": "Event Node",
+        "info": "",
+        "x": 170,
+        "y": 640,
+        "wires": []
+    },
+    {
         "id": "4c9f9d6afca13853",
         "type": "UI Control",
         "z": "a3951fc9914c8a78",
+        "g": "e4dcf98c1da58bad",
         "name": "Relay - Momentary - Push",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -429,7 +1533,7 @@
             "trigger": "PUSH",
             "state": "NONE"
         },
-        "x": 190,
+        "x": 230,
         "y": 180,
         "wires": [
             [
@@ -441,6 +1545,7 @@
         "id": "48a21701bdd5e4e5",
         "type": "UI Control",
         "z": "a3951fc9914c8a78",
+        "g": "2136188ac33c97c3",
         "name": "Relay - Momentary - Release",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -455,8 +1560,8 @@
             "trigger": "RELEASE",
             "state": "NONE"
         },
-        "x": 200,
-        "y": 240,
+        "x": 240,
+        "y": 360,
         "wires": [
             [
                 "8ea9b997c61c6731"
@@ -467,6 +1572,7 @@
         "id": "f64d0e64137bcdfc",
         "type": "inject",
         "z": "a3951fc9914c8a78",
+        "g": "e4dcf98c1da58bad",
         "name": "Simulate Relay - Momentary - Push",
         "props": [
             {
@@ -484,8 +1590,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 260,
-        "y": 140,
+        "x": 280,
+        "y": 100,
         "wires": [
             [
                 "3fae2f6811a13400"
@@ -496,6 +1602,7 @@
         "id": "ed8318976784db80",
         "type": "inject",
         "z": "a3951fc9914c8a78",
+        "g": "2136188ac33c97c3",
         "name": "Simulate Relay - Momentary - Release",
         "props": [
             {
@@ -513,7 +1620,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 270,
+        "x": 290,
         "y": 280,
         "wires": [
             [
@@ -525,6 +1632,7 @@
         "id": "adaaba8d2080a86a",
         "type": "Command",
         "z": "a3951fc9914c8a78",
+        "g": "e4dcf98c1da58bad",
         "name": "Relay 2 State - True",
         "mojo": {
             "device": "dvRelay",
@@ -543,6 +1651,7 @@
         "id": "aded83ac6b6d3d10",
         "type": "Command",
         "z": "a3951fc9914c8a78",
+        "g": "2136188ac33c97c3",
         "name": "Relay 2 State - False",
         "mojo": {
             "device": "dvRelay",
@@ -552,7 +1661,7 @@
             "cmdvalue": "Manual configuration"
         },
         "x": 780,
-        "y": 240,
+        "y": 360,
         "wires": [
             []
         ]
@@ -561,6 +1670,7 @@
         "id": "d6bdeb1a9b11f86c",
         "type": "UI Control",
         "z": "a3951fc9914c8a78",
+        "g": "395ae287179f0ddb",
         "name": "Relay - Momentary - Any",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -575,11 +1685,12 @@
             "trigger": "ANY",
             "state": "NONE"
         },
-        "x": 190,
-        "y": 420,
+        "x": 230,
+        "y": 480,
         "wires": [
             [
-                "70148c9d6698aaf2"
+                "70148c9d6698aaf2",
+                "dafc74dd1eaf4254"
             ]
         ]
     },
@@ -587,6 +1698,7 @@
         "id": "70148c9d6698aaf2",
         "type": "Command",
         "z": "a3951fc9914c8a78",
+        "g": "395ae287179f0ddb",
         "name": "Relay 2 State - Payload",
         "mojo": {
             "device": "dvRelay",
@@ -595,8 +1707,8 @@
             "args": "",
             "cmdvalue": "Message payload"
         },
-        "x": 790,
-        "y": 420,
+        "x": 770,
+        "y": 480,
         "wires": [
             []
         ]
@@ -605,6 +1717,7 @@
         "id": "f4ce2cf9f64b2f5f",
         "type": "Event",
         "z": "a3951fc9914c8a78",
+        "g": "3b74f2675590616f",
         "name": "Relay 2 State Change Event",
         "mojo": {
             "device": "dvRelay",
@@ -614,8 +1727,8 @@
             "paramType": "Boolean",
             "boolParamFilter": "Any"
         },
-        "x": 220,
-        "y": 560,
+        "x": 240,
+        "y": 660,
         "wires": [
             [
                 "206ad933e6991fb9"
@@ -626,7 +1739,8 @@
         "id": "206ad933e6991fb9",
         "type": "Command",
         "z": "a3951fc9914c8a78",
-        "name": "Relay 2 TP Button Feedbacl",
+        "g": "3b74f2675590616f",
+        "name": "Relay 2 TP Button Feedback",
         "mojo": {
             "device": "dvTP",
             "command": "//port/1/channel/42",
@@ -634,15 +1748,44 @@
             "cmdvalue": "Message payload"
         },
         "x": 760,
-        "y": 560,
+        "y": 660,
         "wires": [
             []
         ]
     },
     {
+        "id": "a6d7d41414287870",
+        "type": "comment",
+        "z": "a3951fc9914c8a78",
+        "name": "Readme for this tab",
+        "info": "In this flow,we are creating a momentary relay.\n\nIn the **UI control** node,\nif \nbutton == momentary\ntrigger == push,\nthe msg.payload will be True.\n\nif \nbutton == momentary\ntrigger == release,\nthe msg.payload will be False.\n\nif \nbutton == momentary\ntrigger == any,\nthe msg.payload will be true(push) \nthen False(release).\n\nto know the msg.payload, we can use **debug node**",
+        "x": 1110,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "dafc74dd1eaf4254",
+        "type": "debug",
+        "z": "a3951fc9914c8a78",
+        "g": "395ae287179f0ddb",
+        "name": "Result of trigger set to any",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 540,
+        "wires": []
+    },
+    {
         "id": "c1409cda04e4a03f",
         "type": "UI Control",
         "z": "29b32cd03c941b71",
+        "g": "55017a59b522811a",
         "name": "Relay - Toggle",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -658,7 +1801,7 @@
             "state": "NONE"
         },
         "x": 150,
-        "y": 180,
+        "y": 240,
         "wires": [
             [
                 "8e5cb9d43071e764"
@@ -669,6 +1812,7 @@
         "id": "11f484505d716203",
         "type": "Command",
         "z": "29b32cd03c941b71",
+        "g": "55017a59b522811a",
         "name": "Relay 3 State - False",
         "mojo": {
             "device": "dvRelay",
@@ -677,8 +1821,8 @@
             "args": false,
             "cmdvalue": "Manual configuration"
         },
-        "x": 980,
-        "y": 140,
+        "x": 1240,
+        "y": 380,
         "wires": [
             []
         ]
@@ -687,14 +1831,15 @@
         "id": "8e5cb9d43071e764",
         "type": "Status",
         "z": "29b32cd03c941b71",
-        "name": "Status",
+        "g": "55017a59b522811a",
+        "name": "Monitor and output relay's status",
         "mojo": {
             "device": "dvRelay",
             "parameter": "//relay/3/state",
             "onebased": false
         },
-        "x": 510,
-        "y": 180,
+        "x": 550,
+        "y": 240,
         "wires": [
             [
                 "69e9ae9e29c5b309"
@@ -705,6 +1850,7 @@
         "id": "3fdddb57aaccd5a5",
         "type": "inject",
         "z": "29b32cd03c941b71",
+        "g": "55017a59b522811a",
         "name": "Simulate Relay - Toggle- Push",
         "props": [
             {
@@ -723,7 +1869,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 220,
-        "y": 120,
+        "y": 180,
         "wires": [
             [
                 "8e5cb9d43071e764"
@@ -734,7 +1880,8 @@
         "id": "69e9ae9e29c5b309",
         "type": "switch",
         "z": "29b32cd03c941b71",
-        "name": "",
+        "g": "55017a59b522811a",
+        "name": "conditional operator toggle between true and false",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -748,8 +1895,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 690,
-        "y": 180,
+        "x": 890,
+        "y": 380,
         "wires": [
             [
                 "11f484505d716203"
@@ -757,12 +1904,17 @@
             [
                 "d475f33ecb85e1fb"
             ]
+        ],
+        "outputLabels": [
+            "False",
+            "True"
         ]
     },
     {
         "id": "d475f33ecb85e1fb",
         "type": "Command",
         "z": "29b32cd03c941b71",
+        "g": "55017a59b522811a",
         "name": "Relay 3 State - True",
         "mojo": {
             "device": "dvRelay",
@@ -771,8 +1923,8 @@
             "args": false,
             "cmdvalue": "Manual configuration"
         },
-        "x": 980,
-        "y": 200,
+        "x": 1240,
+        "y": 440,
         "wires": [
             []
         ]
@@ -781,6 +1933,7 @@
         "id": "12d59d90b2a13d51",
         "type": "Event",
         "z": "29b32cd03c941b71",
+        "g": "870175c8cf721ab3",
         "name": "Relay 3 State Change Event",
         "mojo": {
             "device": "dvRelay",
@@ -791,7 +1944,7 @@
             "boolParamFilter": "Any"
         },
         "x": 220,
-        "y": 360,
+        "y": 640,
         "wires": [
             [
                 "f6af922647b4b230"
@@ -802,23 +1955,57 @@
         "id": "f6af922647b4b230",
         "type": "Command",
         "z": "29b32cd03c941b71",
-        "name": "Relay 3 TP Button Feedbacl",
+        "g": "870175c8cf721ab3",
+        "name": "Relay 3 TP Button Feedback",
         "mojo": {
             "device": "dvTP",
             "command": "//port/1/channel/43",
             "onebased": true,
             "cmdvalue": "Message payload"
         },
-        "x": 760,
-        "y": 360,
+        "x": 780,
+        "y": 640,
         "wires": [
             []
         ]
     },
     {
+        "id": "1c97aa5cddbad060",
+        "type": "comment",
+        "z": "29b32cd03c941b71",
+        "g": "55017a59b522811a",
+        "name": "Status Node",
+        "info": "",
+        "x": 490,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "da6e1d499fb5ea5b",
+        "type": "comment",
+        "z": "29b32cd03c941b71",
+        "g": "55017a59b522811a",
+        "name": "Switch Node",
+        "info": "",
+        "x": 770,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6d04184a66f26d04",
+        "type": "comment",
+        "z": "29b32cd03c941b71",
+        "name": "Readme for this tab",
+        "info": "When **Status Node** received payload(true), it will\nthen change the payload to the value of the \ncontrol device configured in the status node\n\nThe **switch node** is used a coditional operator.\nYou can see it as a if-else statement.\n\nIn this flow, if the status of relay is true, it will be change to\nfalse and if the status is false, it will change to true.",
+        "x": 1270,
+        "y": 100,
+        "wires": []
+    },
+    {
         "id": "b5230c19f9ba98e4",
         "type": "UI Control",
         "z": "780de2f8de2c863d",
+        "g": "007694ec282ed36c",
         "name": "UI Control",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -834,7 +2021,7 @@
             "state": "NONE"
         },
         "x": 160,
-        "y": 160,
+        "y": 180,
         "wires": [
             [
                 "0d479bd5770e7332"
@@ -845,16 +2032,17 @@
         "id": "0d479bd5770e7332",
         "type": "Command",
         "z": "780de2f8de2c863d",
+        "g": "007694ec282ed36c",
         "name": "Relay 4 - State False",
         "mojo": {
             "cmdvalue": "Manual configuration",
             "args": true,
-            "device": "dvRelay",
+            "device": "dvtp",
             "command": "//relay/4/state",
             "onebased": false
         },
         "x": 400,
-        "y": 160,
+        "y": 180,
         "wires": [
             [
                 "913d80de34a14675"
@@ -865,6 +2053,7 @@
         "id": "913d80de34a14675",
         "type": "delay",
         "z": "780de2f8de2c863d",
+        "g": "007694ec282ed36c",
         "name": "",
         "pauseType": "delay",
         "timeout": "2",
@@ -879,7 +2068,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 660,
-        "y": 160,
+        "y": 180,
         "wires": [
             [
                 "092483a64e3bb153"
@@ -890,6 +2079,7 @@
         "id": "092483a64e3bb153",
         "type": "Command",
         "z": "780de2f8de2c863d",
+        "g": "007694ec282ed36c",
         "name": "Relay 4 - State False",
         "mojo": {
             "device": "dvRelay",
@@ -899,7 +2089,7 @@
             "cmdvalue": "Manual configuration"
         },
         "x": 920,
-        "y": 160,
+        "y": 180,
         "wires": [
             []
         ]
@@ -908,6 +2098,7 @@
         "id": "0be51ae86af4ea0f",
         "type": "inject",
         "z": "780de2f8de2c863d",
+        "g": "007694ec282ed36c",
         "name": "Simulate Relay - Momentary - Push",
         "props": [
             {
@@ -937,6 +2128,7 @@
         "id": "a8c474f07db33960",
         "type": "Event",
         "z": "780de2f8de2c863d",
+        "g": "81e90fd0175e6f57",
         "name": "Relay 4 State Change Event",
         "mojo": {
             "device": "dvRelay",
@@ -958,7 +2150,8 @@
         "id": "7895b263d3d837c0",
         "type": "Command",
         "z": "780de2f8de2c863d",
-        "name": "Relay 1 TP Button Feedbacl",
+        "g": "81e90fd0175e6f57",
+        "name": "Relay 1 TP Button Feedback",
         "mojo": {
             "device": "dvTP",
             "command": "//port/1/channel/44",
@@ -972,1006 +2165,31 @@
         ]
     },
     {
-        "id": "cad7167184bb0d4c",
-        "type": "Event",
-        "z": "cbf21f4371a67b3c",
-        "name": "idevice - Online event",
-        "mojo": {
-            "device": "idevice",
-            "event": "//Online",
-            "onebased": false,
-            "eventKind": "Parameter",
-            "paramType": "Boolean",
-            "boolParamFilter": "true"
-        },
-        "x": 240,
-        "y": 120,
-        "wires": [
-            [
-                "e4de3c973784f04a"
-            ]
-        ]
-    },
-    {
-        "id": "e4de3c973784f04a",
-        "type": "Command",
-        "z": "cbf21f4371a67b3c",
-        "name": "Set IO 1 Mode - Input",
-        "mojo": {
-            "device": "idevice",
-            "command": "//io/1/mode",
-            "onebased": false,
-            "args": "INPUT",
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 540,
-        "y": 120,
-        "wires": [
-            [
-                "4acc5ba86ff91453"
-            ]
-        ]
-    },
-    {
-        "id": "4acc5ba86ff91453",
-        "type": "Command",
-        "z": "cbf21f4371a67b3c",
-        "name": "Set IO 1 Input mode - Analog",
-        "mojo": {
-            "device": "idevice",
-            "command": "//io/1/inputMode",
-            "onebased": false,
-            "args": "ANALOG",
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 840,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e874d8bdcb2aa509",
+        "id": "900c9b94b24e12a7",
         "type": "comment",
-        "z": "cbf21f4371a67b3c",
-        "name": "Port configuration part",
+        "z": "780de2f8de2c863d",
+        "g": "007694ec282ed36c",
+        "name": "Delay Node",
         "info": "",
-        "x": 240,
-        "y": 160,
+        "x": 670,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "4703076232918c52",
-        "type": "Event",
-        "z": "cbf21f4371a67b3c",
-        "name": "IO Port 1 Analog Input evet",
-        "mojo": {
-            "device": "idevice",
-            "event": "//io/1/analogInput",
-            "onebased": false,
-            "eventKind": "Parameter",
-            "paramType": "Float",
-            "normalized": false
-        },
-        "x": 250,
-        "y": 300,
-        "wires": [
-            [
-                "103c1866cbb4fb8a",
-                "bc994cefc90da61e"
-            ]
-        ]
-    },
-    {
-        "id": "103c1866cbb4fb8a",
-        "type": "Command",
-        "z": "cbf21f4371a67b3c",
-        "name": "TODO: do something",
-        "mojo": {
-            "device": "dvVaria",
-            "command": "//port/1/level/81",
-            "onebased": true,
-            "args": "",
-            "cmdvalue": "Message payload"
-        },
-        "x": 820,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bc994cefc90da61e",
-        "type": "debug",
-        "z": "cbf21f4371a67b3c",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "a0ac02fafc1e8e04",
-        "type": "Event",
-        "z": "e319b75908f448e8",
-        "name": "idevice - Online event",
-        "mojo": {
-            "device": "idevice",
-            "event": "//Online",
-            "onebased": false,
-            "eventKind": "Parameter",
-            "paramType": "Boolean",
-            "boolParamFilter": "true"
-        },
-        "x": 240,
-        "y": 120,
-        "wires": [
-            [
-                "c17971b1bf39f781"
-            ]
-        ]
-    },
-    {
-        "id": "c17971b1bf39f781",
-        "type": "Command",
-        "z": "e319b75908f448e8",
-        "name": "Set IO 2 Mode - Input",
-        "mojo": {
-            "device": "idevice",
-            "command": "//io/2/mode",
-            "onebased": false,
-            "args": "INPUT",
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 540,
-        "y": 120,
-        "wires": [
-            [
-                "f65d5439d14fcc13"
-            ]
-        ]
-    },
-    {
-        "id": "f65d5439d14fcc13",
-        "type": "Command",
-        "z": "e319b75908f448e8",
-        "name": "Set IO 2 Input mode - Digital",
-        "mojo": {
-            "device": "idevice",
-            "command": "//io/2/inputMode",
-            "onebased": false,
-            "args": "DIGITAL",
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 840,
-        "y": 120,
-        "wires": [
-            [
-                "7fe708851a589d58"
-            ]
-        ]
-    },
-    {
-        "id": "54494bbf2c83b61e",
+        "id": "2c14590241c77886",
         "type": "comment",
-        "z": "e319b75908f448e8",
-        "name": "Port configuration part",
-        "info": "",
-        "x": 240,
-        "y": 160,
+        "z": "780de2f8de2c863d",
+        "name": "Readme for this tab",
+        "info": "A **delay node** is used to act ",
+        "x": 1230,
+        "y": 80,
         "wires": []
-    },
-    {
-        "id": "7972c22045041024",
-        "type": "Event",
-        "z": "e319b75908f448e8",
-        "name": "IO Port 2 Digital Input evet",
-        "mojo": {
-            "device": "idevice",
-            "event": "//io/2/digitalInput",
-            "onebased": false,
-            "eventKind": "Parameter",
-            "paramType": "Boolean",
-            "boolParamFilter": "Any"
-        },
-        "x": 250,
-        "y": 300,
-        "wires": [
-            [
-                "978fe0ba9c7ee2a6"
-            ]
-        ]
-    },
-    {
-        "id": "978fe0ba9c7ee2a6",
-        "type": "Command",
-        "z": "e319b75908f448e8",
-        "name": "IO State Button Feedback",
-        "mojo": {
-            "device": "dvVaria",
-            "command": "//port/1/channel/112",
-            "onebased": true,
-            "args": "",
-            "cmdvalue": "Message payload"
-        },
-        "x": 830,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7fe708851a589d58",
-        "type": "Command",
-        "z": "e319b75908f448e8",
-        "name": "Set IO 2 Pull-up - True",
-        "mojo": {
-            "device": "idevice",
-            "command": "//io/2/digitalInput2KPullup",
-            "onebased": false,
-            "args": true,
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 820,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2d4ffb7069abe3b2",
-        "type": "Command",
-        "z": "d487580768fd81c1",
-        "name": "IO 3 State - True",
-        "mojo": {
-            "device": "idevice",
-            "command": "//relay/3/state",
-            "onebased": false,
-            "args": true,
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 770,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "38d7331c8c7dd3ae",
-        "type": "UI Control",
-        "z": "d487580768fd81c1",
-        "name": "IO- Latch On",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "//503/24",
-            "locator": {
-                "ccode": 101,
-                "cport": 1
-            },
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 170,
-        "y": 240,
-        "wires": [
-            [
-                "ecbb0a121027cba0"
-            ]
-        ]
-    },
-    {
-        "id": "e4707e48a0b3cf2b",
-        "type": "Command",
-        "z": "d487580768fd81c1",
-        "name": "IO 3 State - False",
-        "mojo": {
-            "device": "idevice",
-            "command": "//io/3/output",
-            "onebased": false,
-            "args": false,
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 770,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "179b287003bff6f9",
-        "type": "UI Control",
-        "z": "d487580768fd81c1",
-        "name": "IO- Latch Off",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "//503/25",
-            "locator": {
-                "ccode": 102,
-                "cport": 1
-            },
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 170,
-        "y": 300,
-        "wires": [
-            [
-                "e49a7656a528bc88"
-            ]
-        ]
-    },
-    {
-        "id": "2527a971eeaef8b3",
-        "type": "inject",
-        "z": "d487580768fd81c1",
-        "name": "Simulate IO - Latch On",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 240,
-        "y": 200,
-        "wires": [
-            [
-                "ecbb0a121027cba0"
-            ]
-        ]
-    },
-    {
-        "id": "e51e4f71288b71aa",
-        "type": "inject",
-        "z": "d487580768fd81c1",
-        "name": "Simulate IO- Latch Off",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 240,
-        "y": 340,
-        "wires": [
-            [
-                "e49a7656a528bc88"
-            ]
-        ]
-    },
-    {
-        "id": "79e2183dd9f02e74",
-        "type": "Event",
-        "z": "d487580768fd81c1",
-        "name": "IO 3 State Change Event",
-        "mojo": {
-            "device": "idevice",
-            "event": "//io/3/output",
-            "onebased": false,
-            "eventKind": "Parameter",
-            "paramType": "Boolean",
-            "boolParamFilter": "Any"
-        },
-        "x": 250,
-        "y": 520,
-        "wires": [
-            [
-                "0b4c3cb3bdd76df2"
-            ]
-        ]
-    },
-    {
-        "id": "0b4c3cb3bdd76df2",
-        "type": "Command",
-        "z": "d487580768fd81c1",
-        "name": "IO TP Button Feedbacl",
-        "mojo": {
-            "device": "dvTP",
-            "command": "//port/1/channel/113",
-            "onebased": true,
-            "cmdvalue": "Message payload"
-        },
-        "x": 780,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d76915f0704a2ba9",
-        "type": "Event",
-        "z": "d487580768fd81c1",
-        "name": "idevice - Online event",
-        "mojo": {
-            "device": "idevice",
-            "event": "//Online",
-            "onebased": false,
-            "eventKind": "Parameter",
-            "paramType": "Boolean",
-            "boolParamFilter": "true"
-        },
-        "x": 200,
-        "y": 80,
-        "wires": [
-            [
-                "48d24975b31a7070"
-            ]
-        ]
-    },
-    {
-        "id": "48d24975b31a7070",
-        "type": "Command",
-        "z": "d487580768fd81c1",
-        "name": "Set IO 3 Mode - Input",
-        "mojo": {
-            "device": "idevice",
-            "command": "//io/3/mode",
-            "onebased": false,
-            "args": "OUTPUT",
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 500,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "13305b20f1f47773",
-        "type": "comment",
-        "z": "d487580768fd81c1",
-        "name": "Port configuration part",
-        "info": "",
-        "x": 200,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "baa4d4b2f6a575cf",
-        "type": "UI Control",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - Play",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "path": "//508/7",
-            "locator": {
-                "ccode": 1,
-                "cport": 2
-            },
-            "type": "BUTTON",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 200,
-        "y": 120,
-        "wires": [
-            [
-                "b14eef82b4431236"
-            ]
-        ]
-    },
-    {
-        "id": "b14eef82b4431236",
-        "type": "Command",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - Play",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 1
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 700,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "82a361df1c57daf2",
-        "type": "UI Control",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - Stop",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "path": "//508/9",
-            "locator": {
-                "ccode": 2,
-                "cport": 2
-            },
-            "type": "BUTTON",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 200,
-        "y": 160,
-        "wires": [
-            [
-                "c20671d936e959df"
-            ]
-        ]
-    },
-    {
-        "id": "c20671d936e959df",
-        "type": "Command",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - Stop",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 2
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 700,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1475d4c71ff314d9",
-        "type": "UI Control",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - Pause",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "path": "//508/7",
-            "locator": {
-                "ccode": 1,
-                "cport": 2
-            },
-            "type": "BUTTON",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 200,
-        "y": 200,
-        "wires": [
-            [
-                "a88526d917bd8a09"
-            ]
-        ]
-    },
-    {
-        "id": "a88526d917bd8a09",
-        "type": "Command",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - Pause",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 3
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 710,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a0f5281b0ce7b173",
-        "type": "UI Control",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - FFWD",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "path": "//508/7",
-            "locator": {
-                "ccode": 1,
-                "cport": 2
-            },
-            "type": "BUTTON",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 200,
-        "y": 240,
-        "wires": [
-            [
-                "cf936b5f7f894646"
-            ]
-        ]
-    },
-    {
-        "id": "cf936b5f7f894646",
-        "type": "Command",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - FFWD",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 6
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 710,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cb8666599ec206a7",
-        "type": "UI Control",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - REW",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "path": "//508/7",
-            "locator": {
-                "ccode": 1,
-                "cport": 2
-            },
-            "type": "BUTTON",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 200,
-        "y": 280,
-        "wires": [
-            [
-                "fc08c2b34e211e73"
-            ]
-        ]
-    },
-    {
-        "id": "fc08c2b34e211e73",
-        "type": "Command",
-        "z": "fdd846aaf88111f3",
-        "name": "IR - REW",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 7
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 700,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8f984c29992d0e7e",
-        "type": "UI Control",
-        "z": "7f862f0d0e4b3589",
-        "name": "IR - Vol+ Press",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 240,
-        "y": 100,
-        "wires": [
-            [
-                "fef2202427f97dbb"
-            ]
-        ]
-    },
-    {
-        "id": "fef2202427f97dbb",
-        "type": "trigger",
-        "z": "7f862f0d0e4b3589",
-        "name": "",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "300",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 500,
-        "y": 100,
-        "wires": [
-            [
-                "c51b05e5470b866e"
-            ]
-        ]
-    },
-    {
-        "id": "c51b05e5470b866e",
-        "type": "Command",
-        "z": "7f862f0d0e4b3589",
-        "name": "IR - Vol+",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 24
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 720,
-        "y": 100,
-        "wires": [
-            [
-                "fef2202427f97dbb"
-            ]
-        ]
-    },
-    {
-        "id": "7922fc69336f6193",
-        "type": "UI Control",
-        "z": "7f862f0d0e4b3589",
-        "name": "IR - Vol+ Release",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "",
-            "buttonType": "MOMENTARY",
-            "trigger": "RELEASE",
-            "state": "NONE"
-        },
-        "x": 240,
-        "y": 180,
-        "wires": [
-            [
-                "903286ad8b4d4686"
-            ]
-        ]
-    },
-    {
-        "id": "903286ad8b4d4686",
-        "type": "change",
-        "z": "7f862f0d0e4b3589",
-        "name": "set msg.reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 180,
-        "wires": [
-            [
-                "fef2202427f97dbb"
-            ]
-        ]
-    },
-    {
-        "id": "6ecd219e88b20d50",
-        "type": "UI Control",
-        "z": "7f862f0d0e4b3589",
-        "name": "IR - Vol- Press",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 230,
-        "y": 280,
-        "wires": [
-            [
-                "9b22bb9cfadd19b9"
-            ]
-        ]
-    },
-    {
-        "id": "9b22bb9cfadd19b9",
-        "type": "trigger",
-        "z": "7f862f0d0e4b3589",
-        "name": "",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "300",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 500,
-        "y": 280,
-        "wires": [
-            [
-                "66c98a79c2b8dd76"
-            ]
-        ]
-    },
-    {
-        "id": "66c98a79c2b8dd76",
-        "type": "Command",
-        "z": "7f862f0d0e4b3589",
-        "name": "IR - Vol+",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 25
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 720,
-        "y": 280,
-        "wires": [
-            [
-                "9b22bb9cfadd19b9"
-            ]
-        ]
-    },
-    {
-        "id": "9e438f68c7faa498",
-        "type": "UI Control",
-        "z": "7f862f0d0e4b3589",
-        "name": "IR - Vol- Release",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "",
-            "buttonType": "MOMENTARY",
-            "trigger": "RELEASE",
-            "state": "NONE"
-        },
-        "x": 240,
-        "y": 360,
-        "wires": [
-            [
-                "7fd488802dc78718"
-            ]
-        ]
-    },
-    {
-        "id": "7fd488802dc78718",
-        "type": "change",
-        "z": "7f862f0d0e4b3589",
-        "name": "set msg.reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 360,
-        "wires": [
-            [
-                "9b22bb9cfadd19b9"
-            ]
-        ]
-    },
-    {
-        "id": "c7a27d15e1abdf77",
-        "type": "Command",
-        "z": "a8cc8acddc0312a8",
-        "name": "Set Serial Port 1 Parameters",
-        "mojo": {
-            "device": "idevice",
-            "command": "//serial/1/setCommParams",
-            "onebased": false,
-            "args": {
-                "baudRate": "9600",
-                "mode": "232",
-                "stopBits": 1,
-                "parity": "NONE",
-                "dataBits": 8
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 520,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9de7612c69fcc030",
-        "type": "Event",
-        "z": "a8cc8acddc0312a8",
-        "name": "idevice - Online event",
-        "mojo": {
-            "device": "idevice",
-            "event": "//Online",
-            "onebased": false,
-            "eventKind": "Parameter",
-            "paramType": "Boolean",
-            "boolParamFilter": "true"
-        },
-        "x": 200,
-        "y": 80,
-        "wires": [
-            [
-                "c7a27d15e1abdf77"
-            ]
-        ]
     },
     {
         "id": "be2667eab9682c79",
         "type": "UI Control",
         "z": "c72db176c6d2f7f3",
+        "g": "b39f0d1d4a9d8129",
         "name": "Send \"AMX\" button press",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -1998,6 +2216,7 @@
         "id": "d0177f0af89e08c6",
         "type": "UI Control",
         "z": "c72db176c6d2f7f3",
+        "g": "b39f0d1d4a9d8129",
         "name": "Send \"MUSE\" button press",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -2021,37 +2240,10 @@
         ]
     },
     {
-        "id": "8bac3ca1302e3f9c",
-        "type": "UI Control",
-        "z": "c72db176c6d2f7f3",
-        "name": "Press for Keyboard",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "//507/6",
-            "locator": {
-                "acode": 153,
-                "aport": 1,
-                "ccode": 153,
-                "cport": 1
-            },
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 190,
-        "y": 320,
-        "wires": [
-            [
-                "2c70ff36c4f257b7"
-            ]
-        ]
-    },
-    {
         "id": "3942c04836019934",
         "type": "change",
         "z": "c72db176c6d2f7f3",
+        "g": "b39f0d1d4a9d8129",
         "name": "set msg.payload to AMX",
         "rules": [
             {
@@ -2079,6 +2271,7 @@
         "id": "85af4a7a875b0aab",
         "type": "change",
         "z": "c72db176c6d2f7f3",
+        "g": "b39f0d1d4a9d8129",
         "name": "set msg.payload to MUSE",
         "rules": [
             {
@@ -2106,6 +2299,7 @@
         "id": "ea74f137888e0f81",
         "type": "Command",
         "z": "c72db176c6d2f7f3",
+        "g": "b39f0d1d4a9d8129",
         "name": "Send to serial port 1",
         "mojo": {
             "device": "idevice",
@@ -2114,36 +2308,156 @@
             "args": "",
             "cmdvalue": "Message payload"
         },
-        "x": 1120,
-        "y": 240,
+        "x": 1020,
+        "y": 300,
         "wires": [
             []
         ]
     },
     {
-        "id": "2c70ff36c4f257b7",
-        "type": "Command",
+        "id": "81274d8877dc4f70",
+        "type": "comment",
         "z": "c72db176c6d2f7f3",
-        "name": "Send command to activate keyboard on Varia",
+        "g": "b39f0d1d4a9d8129",
+        "name": "Change Node",
+        "info": "",
+        "x": 510,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4bec4f75dc190c29",
+        "type": "comment",
+        "z": "c72db176c6d2f7f3",
+        "name": "Readme for this tab",
+        "info": "Before using serial port, do initialize the parameter.\n\n\n**Change Node** is to change msg.payload \nto a string,\"AMX\". \n\nand using the command node to send the string\nusing serial port 1.\n",
+        "x": 1270,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "4b44b8288496c1a7",
+        "type": "comment",
+        "z": "c72db176c6d2f7f3",
+        "g": "b39f0d1d4a9d8129",
+        "name": "Junction Node",
+        "info": "",
+        "x": 870,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6afec30a09ab1914",
+        "type": "Event",
+        "z": "2fb7de998b7135bd",
+        "g": "8eca0f0d5719924c",
+        "name": "Serial receive event",
         "mojo": {
-            "device": "dvVaria",
-            "command": "//port/1/send_command",
-            "onebased": true,
-            "args": {
-                "data": "^AKB-text to send;enter the text to send;;"
-            },
-            "cmdvalue": "Manual configuration"
+            "device": "idevice",
+            "event": "//serial/2/receive",
+            "onebased": false,
+            "eventKind": "Event"
         },
-        "x": 610,
-        "y": 320,
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "2f269c25de941a72"
+            ]
+        ]
+    },
+    {
+        "id": "2f269c25de941a72",
+        "type": "change",
+        "z": "2fb7de998b7135bd",
+        "g": "8eca0f0d5719924c",
+        "name": "convert buffer to string",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.toString()",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "6877c150a10d718d"
+            ]
+        ]
+    },
+    {
+        "id": "25ee3e2eac02218f",
+        "type": "Command",
+        "z": "2fb7de998b7135bd",
+        "g": "8eca0f0d5719924c",
+        "name": "Show received text on Varia",
+        "mojo": {
+            "device": "dvtp",
+            "cmdvalue": "Message payload",
+            "command": "//port/1/send_command",
+            "onebased": true
+        },
+        "x": 960,
+        "y": 140,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6877c150a10d718d",
+        "type": "template",
+        "z": "2fb7de998b7135bd",
+        "g": "8eca0f0d5719924c",
+        "name": "create the string to send to touch panel",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "^TXT-155,0,{{payload}}",
+        "output": "str",
+        "x": 670,
+        "y": 140,
+        "wires": [
+            [
+                "25ee3e2eac02218f"
+            ]
+        ]
+    },
+    {
+        "id": "7b44c60fdf8bc055",
+        "type": "comment",
+        "z": "2fb7de998b7135bd",
+        "name": "Readme for this tab",
+        "info": "This flow is to be used in conjunction with \nSerial-Send.\n\n\nTemplate node is used to take in the payload\nand send out a certain format.",
+        "x": 1230,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ef22160d180c4079",
+        "type": "comment",
+        "z": "2fb7de998b7135bd",
+        "g": "8eca0f0d5719924c",
+        "name": "Template Node",
+        "info": "",
+        "x": 600,
+        "y": 100,
+        "wires": []
     },
     {
         "id": "83560443442b019d",
         "type": "Event",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
         "name": "Keyboard event",
         "mojo": {
             "device": "dvVaria",
@@ -2152,7 +2466,7 @@
             "eventKind": "Event"
         },
         "x": 140,
-        "y": 180,
+        "y": 260,
         "wires": [
             [
                 "8ee465972f84a996"
@@ -2163,6 +2477,7 @@
         "id": "8ee465972f84a996",
         "type": "change",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
         "name": "convert buffer to string",
         "rules": [
             {
@@ -2179,7 +2494,7 @@
         "to": "",
         "reg": false,
         "x": 400,
-        "y": 180,
+        "y": 260,
         "wires": [
             [
                 "471daf311c0bd4ee"
@@ -2190,6 +2505,7 @@
         "id": "ce53d3f7079d4375",
         "type": "function",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
         "name": "remove AKB part of the string",
         "func": "msg.payload = msg.payload.replace(/AKB-/g,'');\nreturn msg;",
         "outputs": 1,
@@ -2198,8 +2514,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 240,
+        "x": 600,
+        "y": 340,
         "wires": [
             [
                 "058bb4449e18490b"
@@ -2210,6 +2526,7 @@
         "id": "471daf311c0bd4ee",
         "type": "switch",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
         "name": "If it's a keyboard event",
         "property": "payload",
         "propertyType": "msg",
@@ -2223,8 +2540,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 640,
-        "y": 180,
+        "x": 520,
+        "y": 300,
         "wires": [
             [
                 "ce53d3f7079d4375"
@@ -2235,6 +2552,7 @@
         "id": "058bb4449e18490b",
         "type": "change",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
         "name": "save the string in flow.texttosend",
         "rules": [
             {
@@ -2250,8 +2568,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 750,
-        "y": 240,
+        "x": 710,
+        "y": 380,
         "wires": [
             [
                 "09a9fa60653ed205"
@@ -2262,6 +2580,7 @@
         "id": "47881b6c3de1b5ed",
         "type": "UI Control",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "6d7a42213527ad26",
         "name": "Send message",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
@@ -2277,7 +2596,7 @@
             "state": "NONE"
         },
         "x": 140,
-        "y": 360,
+        "y": 580,
         "wires": [
             [
                 "c0ca03cd85d1cdcf"
@@ -2288,6 +2607,7 @@
         "id": "c0ca03cd85d1cdcf",
         "type": "change",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "6d7a42213527ad26",
         "name": "get the string from flow.texttosend",
         "rules": [
             {
@@ -2304,7 +2624,7 @@
         "to": "",
         "reg": false,
         "x": 540,
-        "y": 360,
+        "y": 580,
         "wires": [
             [
                 "f525884c762b42e1"
@@ -2315,6 +2635,7 @@
         "id": "09a9fa60653ed205",
         "type": "template",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
         "name": "create the string to send to touch panel",
         "field": "payload",
         "fieldType": "msg",
@@ -2322,8 +2643,8 @@
         "syntax": "mustache",
         "template": "^TXT-153,0,{{payload}}",
         "output": "str",
-        "x": 1090,
-        "y": 240,
+        "x": 810,
+        "y": 420,
         "wires": [
             [
                 "73ca3cbdb9ba3cfb"
@@ -2334,6 +2655,7 @@
         "id": "73ca3cbdb9ba3cfb",
         "type": "Command",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
         "name": "Show saved text on Varia",
         "mojo": {
             "device": "dvVaria",
@@ -2341,8 +2663,8 @@
             "command": "//port/1/send_command",
             "onebased": true
         },
-        "x": 1070,
-        "y": 300,
+        "x": 930,
+        "y": 460,
         "wires": [
             []
         ]
@@ -2351,6 +2673,7 @@
         "id": "f525884c762b42e1",
         "type": "Command",
         "z": "7ddfcbf0a3d81f7f",
+        "g": "6d7a42213527ad26",
         "name": "Send to serial port 1",
         "mojo": {
             "device": "idevice",
@@ -2359,43 +2682,734 @@
             "args": "",
             "cmdvalue": "Message payload"
         },
-        "x": 1040,
-        "y": 360,
+        "x": 940,
+        "y": 580,
         "wires": [
             []
         ]
     },
     {
-        "id": "6afec30a09ab1914",
-        "type": "Event",
-        "z": "2fb7de998b7135bd",
-        "name": "Serial receive event",
+        "id": "8bac3ca1302e3f9c",
+        "type": "UI Control",
+        "z": "7ddfcbf0a3d81f7f",
+        "g": "0fa687060e7ea7bd",
+        "name": "Press for Keyboard",
         "mojo": {
-            "device": "idevice",
-            "event": "//serial/2/receive",
-            "onebased": false,
-            "eventKind": "Event"
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//507/6",
+            "locator": {
+                "acode": 153,
+                "aport": 1,
+                "ccode": 153,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
         },
-        "x": 210,
+        "x": 150,
         "y": 100,
         "wires": [
             [
-                "2f269c25de941a72"
+                "2c70ff36c4f257b7"
             ]
         ]
     },
     {
-        "id": "2f269c25de941a72",
+        "id": "2c70ff36c4f257b7",
+        "type": "Command",
+        "z": "7ddfcbf0a3d81f7f",
+        "g": "0fa687060e7ea7bd",
+        "name": "Send command to activate keyboard on Varia",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/send_command",
+            "onebased": true,
+            "args": {
+                "data": "^AKB-text to send;enter the text to send;;"
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 870,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa3e01d55b7dd1d1",
+        "type": "comment",
+        "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
+        "name": "Function Node",
+        "info": "",
+        "x": 760,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "bb6bdccafd897fe3",
+        "type": "comment",
+        "z": "7ddfcbf0a3d81f7f",
+        "g": "4b23bef2ab7e2d9c",
+        "name": "Change Node",
+        "info": "",
+        "x": 370,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1c2ec6cf54f88e6a",
+        "type": "comment",
+        "z": "7ddfcbf0a3d81f7f",
+        "name": "Readme for this tab",
+        "info": "The nodes are arranged in a way so the user\ncan read each nodes easily.\n\nIn nodeRED, we can use low code to create function.\n\n**Function Node** is used to replace AKB with nothing.",
+        "x": 1190,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4703076232918c52",
+        "type": "Event",
+        "z": "cbf21f4371a67b3c",
+        "g": "eeaaab48583dd07e",
+        "name": "IO Port 1 Analog Input evet",
+        "mojo": {
+            "device": "idevice",
+            "event": "//io/1/analogInput",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Float",
+            "normalized": false
+        },
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "103c1866cbb4fb8a",
+                "bc994cefc90da61e"
+            ]
+        ]
+    },
+    {
+        "id": "103c1866cbb4fb8a",
+        "type": "Command",
+        "z": "cbf21f4371a67b3c",
+        "g": "eeaaab48583dd07e",
+        "name": "TODO: do something",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/level/81",
+            "onebased": true,
+            "args": "",
+            "cmdvalue": "Message payload"
+        },
+        "x": 800,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc994cefc90da61e",
+        "type": "debug",
+        "z": "cbf21f4371a67b3c",
+        "g": "eeaaab48583dd07e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7972c22045041024",
+        "type": "Event",
+        "z": "e319b75908f448e8",
+        "g": "587acc56888793d8",
+        "name": "IO Port 2 Digital Input evet",
+        "mojo": {
+            "device": "idevice",
+            "event": "//io/2/digitalInput",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "Any"
+        },
+        "x": 250,
+        "y": 240,
+        "wires": [
+            [
+                "978fe0ba9c7ee2a6"
+            ]
+        ]
+    },
+    {
+        "id": "978fe0ba9c7ee2a6",
+        "type": "Command",
+        "z": "e319b75908f448e8",
+        "g": "587acc56888793d8",
+        "name": "IO State Button Feedback",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/112",
+            "onebased": true,
+            "args": "",
+            "cmdvalue": "Message payload"
+        },
+        "x": 830,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d4ffb7069abe3b2",
+        "type": "Command",
+        "z": "d487580768fd81c1",
+        "g": "4749ae9639d48c55",
+        "name": "IO 3 State - True",
+        "mojo": {
+            "device": "idevice",
+            "command": "//relay/3/state",
+            "onebased": false,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 770,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "38d7331c8c7dd3ae",
+        "type": "UI Control",
+        "z": "d487580768fd81c1",
+        "g": "4749ae9639d48c55",
+        "name": "IO- Latch On",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//503/24",
+            "locator": {
+                "ccode": 101,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "ecbb0a121027cba0"
+            ]
+        ]
+    },
+    {
+        "id": "e4707e48a0b3cf2b",
+        "type": "Command",
+        "z": "d487580768fd81c1",
+        "g": "230c9791b1ced58d",
+        "name": "IO 3 State - False",
+        "mojo": {
+            "device": "idevice",
+            "command": "//io/3/output",
+            "onebased": false,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 770,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "179b287003bff6f9",
+        "type": "UI Control",
+        "z": "d487580768fd81c1",
+        "g": "230c9791b1ced58d",
+        "name": "IO- Latch Off",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "//503/25",
+            "locator": {
+                "ccode": 102,
+                "cport": 1
+            },
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "e49a7656a528bc88"
+            ]
+        ]
+    },
+    {
+        "id": "2527a971eeaef8b3",
+        "type": "inject",
+        "z": "d487580768fd81c1",
+        "g": "4749ae9639d48c55",
+        "name": "Simulate IO - Latch On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "ecbb0a121027cba0"
+            ]
+        ]
+    },
+    {
+        "id": "e51e4f71288b71aa",
+        "type": "inject",
+        "z": "d487580768fd81c1",
+        "g": "230c9791b1ced58d",
+        "name": "Simulate IO- Latch Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "e49a7656a528bc88"
+            ]
+        ]
+    },
+    {
+        "id": "79e2183dd9f02e74",
+        "type": "Event",
+        "z": "d487580768fd81c1",
+        "g": "e2a6271b6f15f2cd",
+        "name": "IO 3 State Change Event",
+        "mojo": {
+            "device": "idevice",
+            "event": "//io/3/output",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "Any"
+        },
+        "x": 210,
+        "y": 580,
+        "wires": [
+            [
+                "0b4c3cb3bdd76df2"
+            ]
+        ]
+    },
+    {
+        "id": "0b4c3cb3bdd76df2",
+        "type": "Command",
+        "z": "d487580768fd81c1",
+        "g": "e2a6271b6f15f2cd",
+        "name": "IO TP Button Feedbacl",
+        "mojo": {
+            "device": "dvTP",
+            "command": "//port/1/channel/113",
+            "onebased": true,
+            "cmdvalue": "Message payload"
+        },
+        "x": 760,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "baa4d4b2f6a575cf",
+        "type": "UI Control",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - Play",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "path": "//508/7",
+            "locator": {
+                "ccode": 1,
+                "cport": 2
+            },
+            "type": "BUTTON",
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "b14eef82b4431236"
+            ]
+        ]
+    },
+    {
+        "id": "b14eef82b4431236",
+        "type": "Command",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - Play",
+        "mojo": {
+            "device": "idevice",
+            "command": "//ir/1/clearAndSendIr",
+            "onebased": false,
+            "args": {
+                "code": 1
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 700,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82a361df1c57daf2",
+        "type": "UI Control",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - Stop",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "path": "//508/9",
+            "locator": {
+                "ccode": 2,
+                "cport": 2
+            },
+            "type": "BUTTON",
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "c20671d936e959df"
+            ]
+        ]
+    },
+    {
+        "id": "c20671d936e959df",
+        "type": "Command",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - Stop",
+        "mojo": {
+            "device": "idevice",
+            "command": "//ir/1/clearAndSendIr",
+            "onebased": false,
+            "args": {
+                "code": 2
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 700,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1475d4c71ff314d9",
+        "type": "UI Control",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - Pause",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "path": "//508/7",
+            "locator": {
+                "ccode": 1,
+                "cport": 2
+            },
+            "type": "BUTTON",
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "a88526d917bd8a09"
+            ]
+        ]
+    },
+    {
+        "id": "a88526d917bd8a09",
+        "type": "Command",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - Pause",
+        "mojo": {
+            "device": "idevice",
+            "command": "//ir/1/clearAndSendIr",
+            "onebased": false,
+            "args": {
+                "code": 3
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 710,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0f5281b0ce7b173",
+        "type": "UI Control",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - FFWD",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "path": "//508/7",
+            "locator": {
+                "ccode": 1,
+                "cport": 2
+            },
+            "type": "BUTTON",
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "cf936b5f7f894646"
+            ]
+        ]
+    },
+    {
+        "id": "cf936b5f7f894646",
+        "type": "Command",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - FFWD",
+        "mojo": {
+            "device": "idevice",
+            "command": "//ir/1/clearAndSendIr",
+            "onebased": false,
+            "args": {
+                "code": 6
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 710,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb8666599ec206a7",
+        "type": "UI Control",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - REW",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "path": "//508/7",
+            "locator": {
+                "ccode": 1,
+                "cport": 2
+            },
+            "type": "BUTTON",
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "fc08c2b34e211e73"
+            ]
+        ]
+    },
+    {
+        "id": "fc08c2b34e211e73",
+        "type": "Command",
+        "z": "fdd846aaf88111f3",
+        "g": "c02bfe6bacd1ccb3",
+        "name": "IR - REW",
+        "mojo": {
+            "device": "idevice",
+            "command": "//ir/1/clearAndSendIr",
+            "onebased": false,
+            "args": {
+                "code": 7
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 700,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f984c29992d0e7e",
+        "type": "UI Control",
+        "z": "7f862f0d0e4b3589",
+        "g": "f5390c1c3ac4a43b",
+        "name": "IR - Vol+ Press",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "",
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "fef2202427f97dbb"
+            ]
+        ]
+    },
+    {
+        "id": "fef2202427f97dbb",
+        "type": "trigger",
+        "z": "7f862f0d0e4b3589",
+        "g": "f5390c1c3ac4a43b",
+        "name": "",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "300",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 500,
+        "y": 100,
+        "wires": [
+            [
+                "c51b05e5470b866e"
+            ]
+        ]
+    },
+    {
+        "id": "c51b05e5470b866e",
+        "type": "Command",
+        "z": "7f862f0d0e4b3589",
+        "g": "f5390c1c3ac4a43b",
+        "name": "IR - Vol+",
+        "mojo": {
+            "device": "idevice",
+            "command": "//ir/1/clearAndSendIr",
+            "onebased": false,
+            "args": {
+                "code": 24
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "fef2202427f97dbb"
+            ]
+        ]
+    },
+    {
+        "id": "7922fc69336f6193",
+        "type": "UI Control",
+        "z": "7f862f0d0e4b3589",
+        "g": "f5390c1c3ac4a43b",
+        "name": "IR - Vol+ Release",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "",
+            "buttonType": "MOMENTARY",
+            "trigger": "RELEASE",
+            "state": "NONE"
+        },
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "903286ad8b4d4686"
+            ]
+        ]
+    },
+    {
+        "id": "903286ad8b4d4686",
         "type": "change",
-        "z": "2fb7de998b7135bd",
-        "name": "convert buffer to string",
+        "z": "7f862f0d0e4b3589",
+        "g": "f5390c1c3ac4a43b",
+        "name": "set msg.reset",
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "reset",
                 "pt": "msg",
-                "to": "msg.payload.toString()",
-                "tot": "jsonata"
+                "to": "",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -2403,47 +3417,134 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 100,
+        "x": 500,
+        "y": 180,
         "wires": [
             [
-                "6877c150a10d718d"
+                "fef2202427f97dbb"
             ]
         ]
     },
     {
-        "id": "25ee3e2eac02218f",
-        "type": "Command",
-        "z": "2fb7de998b7135bd",
-        "name": "Show received text on Varia",
+        "id": "6ecd219e88b20d50",
+        "type": "UI Control",
+        "z": "7f862f0d0e4b3589",
+        "g": "424aed7b919ca5f1",
+        "name": "IR - Vol- Press",
         "mojo": {
-            "device": "dvVaria",
-            "cmdvalue": "Message payload",
-            "command": "//port/1/send_command",
-            "onebased": true
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "",
+            "buttonType": "MOMENTARY",
+            "trigger": "PUSH",
+            "state": "NONE"
         },
-        "x": 1180,
-        "y": 100,
+        "x": 230,
+        "y": 280,
         "wires": [
-            []
+            [
+                "9b22bb9cfadd19b9"
+            ]
         ]
     },
     {
-        "id": "6877c150a10d718d",
-        "type": "template",
-        "z": "2fb7de998b7135bd",
-        "name": "create the string to send to touch panel",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "^TXT-155,0,{{payload}}",
-        "output": "str",
-        "x": 830,
-        "y": 100,
+        "id": "9b22bb9cfadd19b9",
+        "type": "trigger",
+        "z": "7f862f0d0e4b3589",
+        "g": "424aed7b919ca5f1",
+        "name": "",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "300",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 500,
+        "y": 280,
         "wires": [
             [
-                "25ee3e2eac02218f"
+                "66c98a79c2b8dd76"
+            ]
+        ]
+    },
+    {
+        "id": "66c98a79c2b8dd76",
+        "type": "Command",
+        "z": "7f862f0d0e4b3589",
+        "g": "424aed7b919ca5f1",
+        "name": "IR - Vol+",
+        "mojo": {
+            "device": "idevice",
+            "command": "//ir/1/clearAndSendIr",
+            "onebased": false,
+            "args": {
+                "code": 25
+            },
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "9b22bb9cfadd19b9"
+            ]
+        ]
+    },
+    {
+        "id": "9e438f68c7faa498",
+        "type": "UI Control",
+        "z": "7f862f0d0e4b3589",
+        "g": "424aed7b919ca5f1",
+        "name": "IR - Vol- Release",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "panel_group": "",
+            "type": "BUTTON",
+            "path": "",
+            "buttonType": "MOMENTARY",
+            "trigger": "RELEASE",
+            "state": "NONE"
+        },
+        "x": 240,
+        "y": 360,
+        "wires": [
+            [
+                "7fd488802dc78718"
+            ]
+        ]
+    },
+    {
+        "id": "7fd488802dc78718",
+        "type": "change",
+        "z": "7f862f0d0e4b3589",
+        "g": "424aed7b919ca5f1",
+        "name": "set msg.reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "9b22bb9cfadd19b9"
             ]
         ]
     }
