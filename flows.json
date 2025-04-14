@@ -112,7 +112,6 @@
         "env": []
     },
     {
-<<<<<<< HEAD
         "id": "92629b49f70e12f9",
         "type": "tab",
         "label": "UI Elements",
@@ -125,11 +124,6 @@
         "type": "group",
         "z": "5bcdfee4c53f83ea",
         "name": "2_Turn off Relay",
-=======
-        "id": "d0f51348c6770777",
-        "type": "group",
-        "z": "5bcdfee4c53f83ea",
-        "name": "2_Turn off Relay",
         "style": {
             "label": true
         },
@@ -149,52 +143,10 @@
         "type": "group",
         "z": "5bcdfee4c53f83ea",
         "name": "1_Turn on Relay",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "style": {
             "label": true
         },
         "nodes": [
-<<<<<<< HEAD
-            "2d1ad8ba3be3c123",
-            "777aca40f9d1fa3a",
-            "cf617aa2f4411bf8",
-            "a49905ee68322159"
-        ],
-        "x": 74,
-        "y": 399,
-        "w": 832,
-        "h": 142
-    },
-    {
-        "id": "6b9fed470b65e3c1",
-        "type": "group",
-        "z": "5bcdfee4c53f83ea",
-        "name": "1_Turn on Relay",
-=======
-            "9176ea61d844c2a9",
-            "5055327f5280fef4",
-            "c31e66d4cacc3c55",
-            "d620fd297b446671",
-            "c18f3f90484c1bd1",
-            "c650c7ebc80be1d3",
-            "685722b192572766"
-        ],
-        "x": 74,
-        "y": 99,
-        "w": 832,
-        "h": 242
-    },
-    {
-        "id": "811b00538f8a2118",
-        "type": "group",
-        "z": "5bcdfee4c53f83ea",
-        "name": "3_Trigger feedback based on relay 1's state",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
-        "style": {
-            "label": true
-        },
-        "nodes": [
-<<<<<<< HEAD
             "9176ea61d844c2a9",
             "5055327f5280fef4",
             "c31e66d4cacc3c55",
@@ -227,18 +179,6 @@
         "h": 122
     },
     {
-=======
-            "0e13c8d6ade31c5f",
-            "b3954386be66a04e",
-            "c2158c05a5dcc718"
-        ],
-        "x": 74,
-        "y": 599,
-        "w": 832,
-        "h": 122
-    },
-    {
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "id": "557dfff3553ac2a4",
         "type": "group",
         "z": "5c28bdec2bd806f2",
@@ -630,11 +570,7 @@
         ],
         "x": 94,
         "y": 179,
-<<<<<<< HEAD
         "w": 872,
-=======
-        "w": 832,
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "h": 142
     },
     {
@@ -942,15 +878,9 @@
         "z": "2b7181e34df83aa6",
         "name": "Control Panel",
         "mojo": {
-<<<<<<< HEAD
             "device": "dvVaria",
             "md5": "40396cdf2f389293c92aa1516a81b26a",
             "tp5": "Muse Exercises UI-yb-(VARIA-80).TP5",
-=======
-            "device": "idevice",
-            "md5": "94cd2b77987d8cc0418229a1b5902195",
-            "tp5": "overview_button_to_muse.TP5",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             "type": "touch_panel"
         },
         "x": 570,
@@ -1008,7 +938,7 @@
         "z": "2b7181e34df83aa6",
         "name": "Controller",
         "mojo": {
-            "controller": "simulator",
+            "controller": "192.168.0.51:80",
             "protocol": "http",
             "host": "192.168.0.51",
             "port": 80,
@@ -1054,11 +984,7 @@
         "g": "557dfff3553ac2a4",
         "name": "Controller",
         "mojo": {
-<<<<<<< HEAD
             "controller": "192.168.0.51:80",
-=======
-            "controller": "simulator",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             "protocol": "http",
             "host": "192.168.0.51",
             "port": 80,
@@ -1078,7 +1004,7 @@
         "mojo": {
             "md5": "40396cdf2f389293c92aa1516a81b26a",
             "tp5": "Muse Exercises UI-yb-(VARIA-80).TP5",
-            "device": "dvtp"
+            "device": "dvVaria"
         },
         "x": 620,
         "y": 260,
@@ -2880,11 +2806,7 @@
         "type": "Command",
         "z": "cbf21f4371a67b3c",
         "g": "eeaaab48583dd07e",
-<<<<<<< HEAD
         "name": "Show value on Touch Panel",
-=======
-        "name": "TODO: do something",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "mojo": {
             "device": "dvVaria",
             "command": "//port/1/level/81",
@@ -2892,11 +2814,7 @@
             "args": "",
             "cmdvalue": "Message payload"
         },
-<<<<<<< HEAD
         "x": 820,
-=======
-        "x": 800,
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "y": 220,
         "wires": [
             []
@@ -3493,7 +3411,6 @@
         "z": "7f862f0d0e4b3589",
         "g": "f5390c1c3ac4a43b",
         "name": "set msg.reset",
-<<<<<<< HEAD
         "rules": [
             {
                 "t": "set",
@@ -3755,14 +3672,11 @@
         "type": "change",
         "z": "92629b49f70e12f9",
         "name": "msg.payload to PUSH",
-=======
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "rules": [
             {
                 "t": "set",
-                "p": "reset",
+                "p": "payload",
                 "pt": "msg",
-<<<<<<< HEAD
                 "to": "PUSH",
                 "tot": "str"
             }
@@ -4163,10 +4077,6 @@
                 "pt": "msg",
                 "to": "msg.payload + 5",
                 "tot": "jsonata"
-=======
-                "to": "",
-                "tot": "str"
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             }
         ],
         "action": "",
@@ -4174,24 +4084,15 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
         "x": 1110,
         "y": 880,
         "wires": [
             [
                 "a275f269dd86bc1e"
-=======
-        "x": 500,
-        "y": 180,
-        "wires": [
-            [
-                "fef2202427f97dbb"
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             ]
         ]
     },
     {
-<<<<<<< HEAD
         "id": "a275f269dd86bc1e",
         "type": "switch",
         "z": "92629b49f70e12f9",
@@ -4262,32 +4163,11 @@
         },
         "x": 1170,
         "y": 980,
-=======
-        "id": "6ecd219e88b20d50",
-        "type": "UI Control",
-        "z": "7f862f0d0e4b3589",
-        "g": "424aed7b919ca5f1",
-        "name": "IR - Vol- Press",
-        "mojo": {
-            "cp": "189d9a92e0c16dbf",
-            "panel_group": "",
-            "type": "BUTTON",
-            "path": "",
-            "buttonType": "MOMENTARY",
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 230,
-        "y": 280,
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "wires": [
-            [
-                "9b22bb9cfadd19b9"
-            ]
+            []
         ]
     },
     {
-<<<<<<< HEAD
         "id": "cbd10eab0ef40fd4",
         "type": "trigger",
         "z": "92629b49f70e12f9",
@@ -4297,18 +4177,6 @@
         "op1type": "str",
         "op2type": "str",
         "duration": "-250",
-=======
-        "id": "9b22bb9cfadd19b9",
-        "type": "trigger",
-        "z": "7f862f0d0e4b3589",
-        "g": "424aed7b919ca5f1",
-        "name": "",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "300",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "extend": false,
         "overrideDelay": false,
         "units": "ms",
@@ -4316,115 +4184,52 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-<<<<<<< HEAD
         "x": 660,
         "y": 880,
         "wires": [
             [
                 "051c8ad4353c8cad"
-=======
-        "x": 500,
-        "y": 280,
-        "wires": [
-            [
-                "66c98a79c2b8dd76"
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             ]
         ]
     },
     {
-<<<<<<< HEAD
         "id": "056b9bf68a72668a",
         "type": "UI Control",
         "z": "92629b49f70e12f9",
         "name": "Button Up Release",
-=======
-        "id": "66c98a79c2b8dd76",
-        "type": "Command",
-        "z": "7f862f0d0e4b3589",
-        "g": "424aed7b919ca5f1",
-        "name": "IR - Vol+",
-        "mojo": {
-            "device": "idevice",
-            "command": "//ir/1/clearAndSendIr",
-            "onebased": false,
-            "args": {
-                "code": 25
-            },
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 720,
-        "y": 280,
-        "wires": [
-            [
-                "9b22bb9cfadd19b9"
-            ]
-        ]
-    },
-    {
-        "id": "9e438f68c7faa498",
-        "type": "UI Control",
-        "z": "7f862f0d0e4b3589",
-        "g": "424aed7b919ca5f1",
-        "name": "IR - Vol- Release",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "mojo": {
             "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "type": "BUTTON",
-<<<<<<< HEAD
             "path": "//502/9",
             "locator": {
                 "ccode": 25,
                 "cport": 1
             },
-=======
-            "path": "",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             "buttonType": "MOMENTARY",
             "trigger": "RELEASE",
             "state": "NONE"
         },
-<<<<<<< HEAD
         "x": 210,
         "y": 1020,
         "wires": [
             [
                 "395c6291451a229f"
-=======
-        "x": 240,
-        "y": 360,
-        "wires": [
-            [
-                "7fd488802dc78718"
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             ]
         ]
     },
     {
-<<<<<<< HEAD
         "id": "d9d18125a9ee59d5",
         "type": "change",
         "z": "92629b49f70e12f9",
-=======
-        "id": "7fd488802dc78718",
-        "type": "change",
-        "z": "7f862f0d0e4b3589",
-        "g": "424aed7b919ca5f1",
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
         "name": "set msg.reset",
         "rules": [
             {
                 "t": "set",
                 "p": "reset",
                 "pt": "msg",
-<<<<<<< HEAD
                 "to": "true",
                 "tot": "bool"
-=======
-                "to": "",
-                "tot": "str"
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             }
         ],
         "action": "",
@@ -4432,7 +4237,6 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
         "x": 660,
         "y": 1020,
         "wires": [
@@ -4722,13 +4526,6 @@
         "wires": [
             [
                 "d44e0cc329f13b59"
-=======
-        "x": 500,
-        "y": 360,
-        "wires": [
-            [
-                "9b22bb9cfadd19b9"
->>>>>>> a23b92d9d32885a6242b241bb281018f1182503e
             ]
         ]
     }
