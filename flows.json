@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "60552a5197243337",
+        "type": "tab",
+        "label": "UI Navigation",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "5c28bdec2bd806f2",
         "type": "tab",
         "label": "Initialization",
@@ -118,6 +126,39 @@
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "125a3f4492e5b900",
+        "type": "subflow",
+        "name": "turn off feedback for all navigation buttons",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "dc2cd145b91d1f20"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 820,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "1f54b4893e569758",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "d0f51348c6770777",
@@ -873,6 +914,148 @@
         ]
     },
     {
+        "id": "dc2cd145b91d1f20",
+        "type": "junction",
+        "z": "125a3f4492e5b900",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "1029e66e97874481"
+            ]
+        ]
+    },
+    {
+        "id": "1f54b4893e569758",
+        "type": "junction",
+        "z": "125a3f4492e5b900",
+        "x": 680,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1029e66e97874481",
+        "type": "Command",
+        "z": "125a3f4492e5b900",
+        "name": "turn off feedback for UI elements",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/11",
+            "onebased": true,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 450,
+        "y": 40,
+        "wires": [
+            [
+                "4fe160bef01ef4c2"
+            ]
+        ]
+    },
+    {
+        "id": "4fe160bef01ef4c2",
+        "type": "Command",
+        "z": "125a3f4492e5b900",
+        "name": "turn off feedback for Relays",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/12",
+            "onebased": true,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 440,
+        "y": 80,
+        "wires": [
+            [
+                "8fc6aa914c24cd34"
+            ]
+        ]
+    },
+    {
+        "id": "8fc6aa914c24cd34",
+        "type": "Command",
+        "z": "125a3f4492e5b900",
+        "name": "turn off feedback for IO",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/13",
+            "onebased": true,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "dfa35d129ffa08b8"
+            ]
+        ]
+    },
+    {
+        "id": "dfa35d129ffa08b8",
+        "type": "Command",
+        "z": "125a3f4492e5b900",
+        "name": "turn off feedback for IR",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/14",
+            "onebased": true,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "4f61c173009e4e34"
+            ]
+        ]
+    },
+    {
+        "id": "4f61c173009e4e34",
+        "type": "Command",
+        "z": "125a3f4492e5b900",
+        "name": "turn off feedback for Serial Comms",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/15",
+            "onebased": true,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "a8bbc778e4f3db46"
+            ]
+        ]
+    },
+    {
+        "id": "a8bbc778e4f3db46",
+        "type": "Command",
+        "z": "125a3f4492e5b900",
+        "name": "turn off feedback for IP Comms",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/16",
+            "onebased": true,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "1f54b4893e569758"
+            ]
+        ]
+    },
+    {
         "id": "24a05d166294a34c",
         "type": "Control Panel",
         "z": "2b7181e34df83aa6",
@@ -938,9 +1121,9 @@
         "z": "2b7181e34df83aa6",
         "name": "Controller",
         "mojo": {
-            "controller": "192.168.0.51:80",
+            "controller": "192.168.0.52:80",
             "protocol": "http",
-            "host": "192.168.0.51",
+            "host": "192.168.0.52",
             "port": 80,
             "username": "admin",
             "password": "password"
@@ -978,15 +1161,520 @@
         ]
     },
     {
+        "id": "6520f25d6c7a1bfb",
+        "type": "UI Control",
+        "z": "60552a5197243337",
+        "name": "PUSH: UI Elements",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "path": "//1/9",
+            "locator": {
+                "ccode": 11,
+                "cport": 1
+            },
+            "type": "BUTTON",
+            "buttonType": "TOGGLE",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "5b0ff362387e6ecb",
+                "5bf5481b89e11cf6"
+            ]
+        ]
+    },
+    {
+        "id": "5b0ff362387e6ecb",
+        "type": "subflow:125a3f4492e5b900",
+        "z": "60552a5197243337",
+        "name": "",
+        "x": 560,
+        "y": 140,
+        "wires": [
+            [
+                "51ff848788ccd570"
+            ]
+        ]
+    },
+    {
+        "id": "51ff848788ccd570",
+        "type": "Command",
+        "z": "60552a5197243337",
+        "name": "Turn on feedback for UI Elements",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/11",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 960,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7b20ce079d83a0d",
+        "type": "UI Control",
+        "z": "60552a5197243337",
+        "name": "PUSH: Relays",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "path": "//1/12",
+            "locator": {
+                "ccode": 12,
+                "cport": 1
+            },
+            "type": "BUTTON",
+            "buttonType": "TOGGLE",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "cbf1a1ab6e009b40",
+                "96785ca4e7d72e08"
+            ]
+        ]
+    },
+    {
+        "id": "cbf1a1ab6e009b40",
+        "type": "subflow:125a3f4492e5b900",
+        "z": "60552a5197243337",
+        "name": "",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "adb6d1477b290db8"
+            ]
+        ]
+    },
+    {
+        "id": "adb6d1477b290db8",
+        "type": "Command",
+        "z": "60552a5197243337",
+        "name": "Turn on feedback for Relays",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/12",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 940,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b8cbc1b14c5880d",
+        "type": "UI Control",
+        "z": "60552a5197243337",
+        "name": "PUSH: IO",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "path": "//1/14",
+            "locator": {
+                "ccode": 13,
+                "cport": 1
+            },
+            "type": "BUTTON",
+            "buttonType": "TOGGLE",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "24e2c79b0510c815",
+                "bb087cb39bb6138b"
+            ]
+        ]
+    },
+    {
+        "id": "24e2c79b0510c815",
+        "type": "subflow:125a3f4492e5b900",
+        "z": "60552a5197243337",
+        "name": "",
+        "x": 560,
+        "y": 340,
+        "wires": [
+            [
+                "3e1105ab16e94c3b"
+            ]
+        ]
+    },
+    {
+        "id": "3e1105ab16e94c3b",
+        "type": "Command",
+        "z": "60552a5197243337",
+        "name": "Turn on feedback for IO",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/13",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 930,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0602cc2798c72585",
+        "type": "UI Control",
+        "z": "60552a5197243337",
+        "name": "PUSH: IR",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "path": "//1/13",
+            "locator": {
+                "ccode": 14,
+                "cport": 1
+            },
+            "type": "BUTTON",
+            "buttonType": "TOGGLE",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "d314df12df9d7d57",
+                "d6ca82a57344a733"
+            ]
+        ]
+    },
+    {
+        "id": "d314df12df9d7d57",
+        "type": "subflow:125a3f4492e5b900",
+        "z": "60552a5197243337",
+        "name": "",
+        "x": 560,
+        "y": 440,
+        "wires": [
+            [
+                "89446cd42ff36997"
+            ]
+        ]
+    },
+    {
+        "id": "89446cd42ff36997",
+        "type": "Command",
+        "z": "60552a5197243337",
+        "name": "Turn on feedback for IR",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/14",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 930,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79aad84e8da0e507",
+        "type": "UI Control",
+        "z": "60552a5197243337",
+        "name": "PUSH: Serial Comms",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "path": "//1/11",
+            "locator": {
+                "ccode": 15,
+                "cport": 1
+            },
+            "type": "BUTTON",
+            "buttonType": "TOGGLE",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "d2564d95e5d1d7a1",
+                "3d8e950af31ddd28"
+            ]
+        ]
+    },
+    {
+        "id": "d2564d95e5d1d7a1",
+        "type": "subflow:125a3f4492e5b900",
+        "z": "60552a5197243337",
+        "name": "",
+        "x": 560,
+        "y": 540,
+        "wires": [
+            [
+                "ee9b83193d7732fe"
+            ]
+        ]
+    },
+    {
+        "id": "ee9b83193d7732fe",
+        "type": "Command",
+        "z": "60552a5197243337",
+        "name": "Turn on feedback for Serial Comms",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/15",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 960,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea9ba0bdaa941f07",
+        "type": "UI Control",
+        "z": "60552a5197243337",
+        "name": "PUSH: IP Comms",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "path": "//1/17",
+            "locator": {
+                "ccode": 16,
+                "cport": 1
+            },
+            "type": "BUTTON",
+            "buttonType": "TOGGLE",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "26c072ed0efaeacc",
+                "4862baea54276334"
+            ]
+        ]
+    },
+    {
+        "id": "26c072ed0efaeacc",
+        "type": "subflow:125a3f4492e5b900",
+        "z": "60552a5197243337",
+        "name": "",
+        "x": 560,
+        "y": 640,
+        "wires": [
+            [
+                "1c0a893c68a1ddef"
+            ]
+        ]
+    },
+    {
+        "id": "1c0a893c68a1ddef",
+        "type": "Command",
+        "z": "60552a5197243337",
+        "name": "Turn on feedback for Serial Comms",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/16",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 960,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5bf5481b89e11cf6",
+        "type": "Navigate",
+        "z": "60552a5197243337",
+        "name": "Show UI Elements popup",
+        "mojo": {
+            "g5Command": "^PPN-UI Elements",
+            "g5CommandPrefix": "",
+            "page": "",
+            "cp": "24a05d166294a34c"
+        },
+        "x": 510,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96785ca4e7d72e08",
+        "type": "Navigate",
+        "z": "60552a5197243337",
+        "name": "show Relays popup",
+        "mojo": {
+            "g5Command": "^PPN-Relays",
+            "g5CommandPrefix": "",
+            "page": "",
+            "cp": "24a05d166294a34c"
+        },
+        "x": 490,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb087cb39bb6138b",
+        "type": "Navigate",
+        "z": "60552a5197243337",
+        "name": "show IO popup",
+        "mojo": {
+            "g5Command": "^PPN-IO",
+            "g5CommandPrefix": "",
+            "page": "",
+            "cp": "24a05d166294a34c"
+        },
+        "x": 480,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6ca82a57344a733",
+        "type": "Navigate",
+        "z": "60552a5197243337",
+        "name": "show IR popup",
+        "mojo": {
+            "g5Command": "^PPN-IR",
+            "g5CommandPrefix": "",
+            "page": "",
+            "cp": "24a05d166294a34c"
+        },
+        "x": 480,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d8e950af31ddd28",
+        "type": "Navigate",
+        "z": "60552a5197243337",
+        "name": "show Serial Comms popup",
+        "mojo": {
+            "g5Command": "^PPN-Serial Comms",
+            "g5CommandPrefix": "",
+            "page": "",
+            "cp": "24a05d166294a34c"
+        },
+        "x": 520,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4862baea54276334",
+        "type": "Navigate",
+        "z": "60552a5197243337",
+        "name": "show IP Comms popup",
+        "mojo": {
+            "g5Command": "^PPN-IP Comms",
+            "g5CommandPrefix": "",
+            "page": "",
+            "cp": "24a05d166294a34c"
+        },
+        "x": 510,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d677c239863e8685",
+        "type": "UI Control",
+        "z": "60552a5197243337",
+        "name": "PUSH: IP Comms",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "panel_group": "",
+            "path": "//1/7",
+            "locator": {
+                "ccode": 2,
+                "cport": 1
+            },
+            "type": "BUTTON",
+            "buttonType": "TOGGLE",
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 210,
+        "y": 740,
+        "wires": [
+            [
+                "d4385c174ed64240",
+                "eda4092467fc86ed"
+            ]
+        ]
+    },
+    {
+        "id": "d4385c174ed64240",
+        "type": "subflow:125a3f4492e5b900",
+        "z": "60552a5197243337",
+        "name": "",
+        "x": 560,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eda4092467fc86ed",
+        "type": "Navigate",
+        "z": "60552a5197243337",
+        "name": "Flip to Startup Page",
+        "mojo": {
+            "g5Command": "^PGE-Startup",
+            "g5CommandPrefix": "^PGE-",
+            "page": "//2",
+            "cp": "24a05d166294a34c"
+        },
+        "x": 500,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "3f0a0d3c06ea2cad",
         "type": "Controller",
         "z": "5c28bdec2bd806f2",
         "g": "557dfff3553ac2a4",
         "name": "Controller",
         "mojo": {
-            "controller": "192.168.0.51:80",
+            "controller": "192.168.0.52:80",
             "protocol": "http",
-            "host": "192.168.0.51",
+            "host": "192.168.0.52",
             "port": 80,
             "username": "admin",
             "password": "password"
