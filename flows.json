@@ -1056,22 +1056,7 @@
         ]
     },
     {
-        "id": "24a05d166294a34c",
-        "type": "Control Panel",
-        "z": "2b7181e34df83aa6",
-        "name": "Control Panel",
-        "mojo": {
-            "device": "dvVaria",
-            "md5": "40396cdf2f389293c92aa1516a81b26a",
-            "tp5": "Muse Exercises UI-yb-(VARIA-80).TP5",
-            "type": "touch_panel"
-        },
-        "x": 570,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "2c310739e24e352d",
+        "id": "fa0e7c0ed7350d8b",
         "type": "UI Control",
         "z": "2b7181e34df83aa6",
         "name": "UI Control",
@@ -1084,21 +1069,22 @@
                 "ccode": 1,
                 "cport": 1
             },
-            "buttonType": "MOMENTARY",
+            "buttonType": "TOGGLE",
             "trigger": "ANY",
             "state": "NONE"
         },
-        "x": 320,
-        "y": 400,
+        "x": 220,
+        "y": 420,
         "wires": [
             [
-                "7a0b8ed4f4a80120",
-                "0e4511b5cebacdfe"
+                "ad7620409956ae00",
+                "5be1cf946655da45",
+                "36562a6696a0bcd6"
             ]
         ]
     },
     {
-        "id": "7a0b8ed4f4a80120",
+        "id": "ad7620409956ae00",
         "type": "Command",
         "z": "2b7181e34df83aa6",
         "name": "feedback",
@@ -1109,41 +1095,24 @@
             "args": true,
             "cmdvalue": "Manual configuration"
         },
-        "x": 560,
-        "y": 500,
+        "x": 460,
+        "y": 480,
         "wires": [
             []
         ]
     },
     {
-        "id": "b4ef9f518a1103b2",
-        "type": "Controller",
-        "z": "2b7181e34df83aa6",
-        "name": "Controller",
-        "mojo": {
-            "controller": "192.168.0.52:80",
-            "protocol": "http",
-            "host": "192.168.0.52",
-            "port": 80,
-            "username": "admin",
-            "password": "password"
-        },
-        "x": 320,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "735fbf4f76967eb6",
+        "id": "d746fb3666fef644",
         "type": "comment",
         "z": "2b7181e34df83aa6",
         "name": "Readme for this tab",
-        "info": "",
-        "x": 1070,
-        "y": 240,
+        "info": "1. Butttons did not appeared in Automator\nIf the buttons created in TP5 is not shown after \nthe design is imported in Automator, check in \nthe tp5, a channel code is assigned to the button\n\n",
+        "x": 530,
+        "y": 80,
         "wires": []
     },
     {
-        "id": "0e4511b5cebacdfe",
+        "id": "5be1cf946655da45",
         "type": "Command",
         "z": "2b7181e34df83aa6",
         "name": "turn on LED P1",
@@ -1154,8 +1123,35 @@
             "args": "OFF",
             "cmdvalue": "Manual configuration"
         },
-        "x": 580,
-        "y": 400,
+        "x": 480,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9a040ed06736976",
+        "type": "comment",
+        "z": "2b7181e34df83aa6",
+        "name": "technical note: Button set to Toggle and output in debug",
+        "info": "Setting in UI Control Node<br>\nButton = TOGGLE\n---\n**Trigger: ANY**\n<br>\n[State] : [Output in debug]<br>\nNONE: True (btn Pushed) / False (btn Released) <br>\nOFF: False (btn Pushed) / False (btn Released) <br>\nON: True (btn Pushed) / True (btn Released)\n---\n**Trigger: PUSH**\n<br>\n[State] : [Output in debug]<br>\nNONE: True (btn Pushed) / - (btn Released) <br>\nOFF: False (btn Pushed) / - (btn Released) <br>\nON: True (btn Pushed) / - (btn Released)\n---\n**Trigger: RELEASE**\n<br>\n[State] : [Output in debug]<br>\nNONE: - (btn Pushed) / False (btn Released) <br>\nOFF: - (btn Pushed) / False (btn Released) <br>\nON: - (btn Pushed) / True (btn Released)\n---",
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "36562a6696a0bcd6",
+        "type": "UI Feedback",
+        "z": "2b7181e34df83aa6",
+        "name": "UI Feedback",
+        "mojo": {
+            "cp": "24a05d166294a34c",
+            "g5CommandPrefix": "^PGE-",
+            "g5Command": "^PGE-",
+            "path": ""
+        },
+        "x": 470,
+        "y": 540,
         "wires": [
             []
         ]
@@ -1166,7 +1162,7 @@
         "z": "60552a5197243337",
         "name": "PUSH: UI Elements",
         "mojo": {
-            "cp": "24a05d166294a34c",
+            "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "path": "//1/9",
             "locator": {
@@ -1201,30 +1197,12 @@
         ]
     },
     {
-        "id": "51ff848788ccd570",
-        "type": "Command",
-        "z": "60552a5197243337",
-        "name": "Turn on feedback for UI Elements",
-        "mojo": {
-            "device": "dvVaria",
-            "command": "//port/1/channel/11",
-            "onebased": true,
-            "args": true,
-            "cmdvalue": "Manual configuration"
-        },
-        "x": 960,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "a7b20ce079d83a0d",
         "type": "UI Control",
         "z": "60552a5197243337",
         "name": "PUSH: Relays",
         "mojo": {
-            "cp": "24a05d166294a34c",
+            "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "path": "//1/12",
             "locator": {
@@ -1282,7 +1260,7 @@
         "z": "60552a5197243337",
         "name": "PUSH: IO",
         "mojo": {
-            "cp": "24a05d166294a34c",
+            "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "path": "//1/14",
             "locator": {
@@ -1340,7 +1318,7 @@
         "z": "60552a5197243337",
         "name": "PUSH: IR",
         "mojo": {
-            "cp": "24a05d166294a34c",
+            "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "path": "//1/13",
             "locator": {
@@ -1398,7 +1376,7 @@
         "z": "60552a5197243337",
         "name": "PUSH: Serial Comms",
         "mojo": {
-            "cp": "24a05d166294a34c",
+            "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "path": "//1/11",
             "locator": {
@@ -1456,7 +1434,7 @@
         "z": "60552a5197243337",
         "name": "PUSH: IP Comms",
         "mojo": {
-            "cp": "24a05d166294a34c",
+            "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "path": "//1/17",
             "locator": {
@@ -1616,7 +1594,7 @@
         "z": "60552a5197243337",
         "name": "PUSH: IP Comms",
         "mojo": {
-            "cp": "24a05d166294a34c",
+            "cp": "189d9a92e0c16dbf",
             "panel_group": "",
             "path": "//1/7",
             "locator": {
@@ -1666,15 +1644,33 @@
         ]
     },
     {
+        "id": "51ff848788ccd570",
+        "type": "Command",
+        "z": "60552a5197243337",
+        "name": "Turn on feedback for UI Elements",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/11",
+            "onebased": true,
+            "args": true,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 960,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "3f0a0d3c06ea2cad",
         "type": "Controller",
         "z": "5c28bdec2bd806f2",
         "g": "557dfff3553ac2a4",
         "name": "Controller",
         "mojo": {
-            "controller": "192.168.0.52:80",
+            "controller": "192.168.0.51:80",
             "protocol": "http",
-            "host": "192.168.0.52",
+            "host": "192.168.0.51",
             "port": 80,
             "username": "admin",
             "password": "password"
