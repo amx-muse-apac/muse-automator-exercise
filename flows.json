@@ -1051,6 +1051,26 @@
         "y": 240,
         "wires": [
             [
+                "7f24e3dca8c6bdb8"
+            ]
+        ]
+    },
+    {
+        "id": "7f24e3dca8c6bdb8",
+        "type": "Command",
+        "z": "125a3f4492e5b900",
+        "name": "turn off feedback for Duet Modules",
+        "mojo": {
+            "device": "dvVaria",
+            "command": "//port/1/channel/17",
+            "onebased": true,
+            "args": false,
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
                 "1f54b4893e569758"
             ]
         ]
@@ -1179,7 +1199,7 @@
         "wires": [
             [
                 "5b0ff362387e6ecb",
-                "5bf5481b89e11cf6"
+                "d45b13305a2ffa08"
             ]
         ]
     },
@@ -1219,7 +1239,7 @@
         "wires": [
             [
                 "cbf1a1ab6e009b40",
-                "96785ca4e7d72e08"
+                "9c84ddcf6ec42f46"
             ]
         ]
     },
@@ -1277,7 +1297,7 @@
         "wires": [
             [
                 "24e2c79b0510c815",
-                "bb087cb39bb6138b"
+                "b6f9597949b81eae"
             ]
         ]
     },
@@ -1335,7 +1355,7 @@
         "wires": [
             [
                 "d314df12df9d7d57",
-                "d6ca82a57344a733"
+                "1a6ff9b43f839367"
             ]
         ]
     },
@@ -1393,7 +1413,7 @@
         "wires": [
             [
                 "d2564d95e5d1d7a1",
-                "3d8e950af31ddd28"
+                "71a9418b04975f44"
             ]
         ]
     },
@@ -1451,7 +1471,7 @@
         "wires": [
             [
                 "26c072ed0efaeacc",
-                "4862baea54276334"
+                "02a113b4ffea691f"
             ]
         ]
     },
@@ -1472,7 +1492,7 @@
         "id": "1c0a893c68a1ddef",
         "type": "Command",
         "z": "60552a5197243337",
-        "name": "Turn on feedback for Serial Comms",
+        "name": "Turn on feedback for IP Comms",
         "mojo": {
             "device": "dvVaria",
             "command": "//port/1/channel/16",
@@ -1480,110 +1500,8 @@
             "args": true,
             "cmdvalue": "Manual configuration"
         },
-        "x": 960,
+        "x": 950,
         "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5bf5481b89e11cf6",
-        "type": "Navigate",
-        "z": "60552a5197243337",
-        "name": "Show UI Elements popup",
-        "mojo": {
-            "g5Command": "^PPN-UI Elements",
-            "g5CommandPrefix": "",
-            "page": "",
-            "cp": "24a05d166294a34c"
-        },
-        "x": 510,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "96785ca4e7d72e08",
-        "type": "Navigate",
-        "z": "60552a5197243337",
-        "name": "show Relays popup",
-        "mojo": {
-            "g5Command": "^PPN-Relays",
-            "g5CommandPrefix": "",
-            "page": "",
-            "cp": "24a05d166294a34c"
-        },
-        "x": 490,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bb087cb39bb6138b",
-        "type": "Navigate",
-        "z": "60552a5197243337",
-        "name": "show IO popup",
-        "mojo": {
-            "g5Command": "^PPN-IO",
-            "g5CommandPrefix": "",
-            "page": "",
-            "cp": "24a05d166294a34c"
-        },
-        "x": 480,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d6ca82a57344a733",
-        "type": "Navigate",
-        "z": "60552a5197243337",
-        "name": "show IR popup",
-        "mojo": {
-            "g5Command": "^PPN-IR",
-            "g5CommandPrefix": "",
-            "page": "",
-            "cp": "24a05d166294a34c"
-        },
-        "x": 480,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3d8e950af31ddd28",
-        "type": "Navigate",
-        "z": "60552a5197243337",
-        "name": "show Serial Comms popup",
-        "mojo": {
-            "g5Command": "^PPN-Serial Comms",
-            "g5CommandPrefix": "",
-            "page": "",
-            "cp": "24a05d166294a34c"
-        },
-        "x": 520,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4862baea54276334",
-        "type": "Navigate",
-        "z": "60552a5197243337",
-        "name": "show IP Comms popup",
-        "mojo": {
-            "g5Command": "^PPN-IP Comms",
-            "g5CommandPrefix": "",
-            "page": "",
-            "cp": "24a05d166294a34c"
-        },
-        "x": 510,
-        "y": 680,
         "wires": [
             []
         ]
@@ -1592,7 +1510,7 @@
         "id": "d677c239863e8685",
         "type": "UI Control",
         "z": "60552a5197243337",
-        "name": "PUSH: IP Comms",
+        "name": "PUSH: EXIT",
         "mojo": {
             "cp": "189d9a92e0c16dbf",
             "panel_group": "",
@@ -1606,12 +1524,12 @@
             "trigger": "PUSH",
             "state": "NONE"
         },
-        "x": 210,
+        "x": 190,
         "y": 740,
         "wires": [
             [
                 "d4385c174ed64240",
-                "eda4092467fc86ed"
+                "34f2c56485399035"
             ]
         ]
     },
@@ -1622,23 +1540,6 @@
         "name": "",
         "x": 560,
         "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "eda4092467fc86ed",
-        "type": "Navigate",
-        "z": "60552a5197243337",
-        "name": "Flip to Startup Page",
-        "mojo": {
-            "g5Command": "^PGE-Startup",
-            "g5CommandPrefix": "^PGE-",
-            "page": "//2",
-            "cp": "24a05d166294a34c"
-        },
-        "x": 500,
-        "y": 780,
         "wires": [
             []
         ]
@@ -1662,15 +1563,134 @@
         ]
     },
     {
+        "id": "d45b13305a2ffa08",
+        "type": "UI Feedback",
+        "z": "60552a5197243337",
+        "name": "Show UI Elements popup",
+        "mojo": {
+            "cp": "189d9a92e0c16dbf",
+            "g5Command": "^PPN-UI Elements",
+            "g5CommandPrefix": "",
+            "path": ""
+        },
+        "x": 510,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c84ddcf6ec42f46",
+        "type": "UI Feedback",
+        "z": "60552a5197243337",
+        "name": "Show Relays popup",
+        "mojo": {
+            "g5Command": "^PPN-Relays",
+            "g5CommandPrefix": "",
+            "path": "",
+            "cp": "189d9a92e0c16dbf"
+        },
+        "x": 500,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6f9597949b81eae",
+        "type": "UI Feedback",
+        "z": "60552a5197243337",
+        "name": "Show IO popup",
+        "mojo": {
+            "g5Command": "^PPN-IO",
+            "g5CommandPrefix": "",
+            "path": "",
+            "cp": "189d9a92e0c16dbf"
+        },
+        "x": 480,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a6ff9b43f839367",
+        "type": "UI Feedback",
+        "z": "60552a5197243337",
+        "name": "Show IR popup",
+        "mojo": {
+            "g5Command": "^PPN-IR",
+            "g5CommandPrefix": "",
+            "path": "",
+            "cp": "189d9a92e0c16dbf"
+        },
+        "x": 480,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71a9418b04975f44",
+        "type": "UI Feedback",
+        "z": "60552a5197243337",
+        "name": "Show Serial Comms popup",
+        "mojo": {
+            "g5Command": "^PPN-Serial Comms",
+            "g5CommandPrefix": "",
+            "path": "",
+            "cp": "189d9a92e0c16dbf"
+        },
+        "x": 520,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02a113b4ffea691f",
+        "type": "UI Feedback",
+        "z": "60552a5197243337",
+        "name": "Show IP Comms popup",
+        "mojo": {
+            "g5Command": "^PPN-IP Comms",
+            "g5CommandPrefix": "",
+            "path": "",
+            "cp": "189d9a92e0c16dbf"
+        },
+        "x": 510,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34f2c56485399035",
+        "type": "UI Feedback",
+        "z": "60552a5197243337",
+        "name": "Show IP Comms popup",
+        "mojo": {
+            "g5Command": "^PGE-Startup",
+            "g5CommandPrefix": "^PGE-",
+            "path": "//2",
+            "cp": "189d9a92e0c16dbf"
+        },
+        "x": 510,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "3f0a0d3c06ea2cad",
         "type": "Controller",
         "z": "5c28bdec2bd806f2",
         "g": "557dfff3553ac2a4",
         "name": "Controller",
         "mojo": {
-            "controller": "192.168.0.51:80",
+            "controller": "192.168.0.52:80",
             "protocol": "http",
-            "host": "192.168.0.51",
+            "host": "192.168.0.52",
             "port": 80,
             "username": "admin",
             "password": "password"
@@ -3859,9 +3879,9 @@
         "mojo": {
             "cp": "189d9a92e0c16dbf",
             "panel_group": "",
-            "path": "//508/7",
+            "path": "//508/8",
             "locator": {
-                "ccode": 1,
+                "ccode": 3,
                 "cport": 2
             },
             "type": "BUTTON",
@@ -3907,9 +3927,9 @@
         "mojo": {
             "cp": "189d9a92e0c16dbf",
             "panel_group": "",
-            "path": "//508/7",
+            "path": "//508/11",
             "locator": {
-                "ccode": 1,
+                "ccode": 6,
                 "cport": 2
             },
             "type": "BUTTON",
@@ -3955,9 +3975,9 @@
         "mojo": {
             "cp": "189d9a92e0c16dbf",
             "panel_group": "",
-            "path": "//508/7",
+            "path": "//508/10",
             "locator": {
-                "ccode": 1,
+                "ccode": 7,
                 "cport": 2
             },
             "type": "BUTTON",
@@ -4027,7 +4047,7 @@
         "op2": "",
         "op1type": "str",
         "op2type": "nul",
-        "duration": "300",
+        "duration": "-300",
         "extend": false,
         "overrideDelay": false,
         "units": "ms",
@@ -4035,7 +4055,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 500,
+        "x": 520,
         "y": 100,
         "wires": [
             [
@@ -4061,9 +4081,7 @@
         "x": 720,
         "y": 100,
         "wires": [
-            [
-                "fef2202427f97dbb"
-            ]
+            []
         ]
     },
     {
@@ -4150,7 +4168,7 @@
         "op2": "",
         "op1type": "str",
         "op2type": "nul",
-        "duration": "300",
+        "duration": "-300",
         "extend": false,
         "overrideDelay": false,
         "units": "ms",
@@ -4158,7 +4176,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 500,
+        "x": 520,
         "y": 280,
         "wires": [
             [
@@ -4184,9 +4202,7 @@
         "x": 720,
         "y": 280,
         "wires": [
-            [
-                "9b22bb9cfadd19b9"
-            ]
+            []
         ]
     },
     {
